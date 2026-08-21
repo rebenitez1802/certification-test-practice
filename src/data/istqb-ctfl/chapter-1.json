@@ -1,0 +1,454 @@
+[
+  {
+    "id": "ctfl-1-001",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "Which of the following is a typical objective of testing?",
+    "options": [
+      "Repairing the defects that are found during test execution",
+      "Proving that the software contains no defects",
+      "Triggering failures and finding defects",
+      "Eliminating the need for static quality assurance activities"
+    ],
+    "correct": [2],
+    "explanation": "Typical test objectives include triggering failures and finding defects, evaluating quality, and building confidence. Repairing defects is debugging, not testing, and testing can never prove the complete absence of defects."
+  },
+  {
+    "id": "ctfl-1-002",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Which statement best describes the relationship between testing and debugging?",
+    "options": [
+      "Dynamic testing can trigger a failure, while debugging finds and removes the defect that caused it",
+      "Testing and debugging are two names for the same activity, since both deal with defects",
+      "Debugging is performed by testers to reproduce failures before test execution starts",
+      "Testing removes the causes of failures, while debugging demonstrates that the fixes work"
+    ],
+    "correct": [0],
+    "explanation": "Testing shows failures caused by defects, while debugging is the development activity of finding, analyzing and fixing the causes. They are separate activities; testing does not remove defect causes, and confirmation testing (not debugging) checks that fixes work."
+  },
+  {
+    "id": "ctfl-1-003",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "Which of the following is an example of static testing?",
+    "options": [
+      "Executing a component using drivers and stubs",
+      "Reviewing a requirements specification to find ambiguities",
+      "Running an automated regression test suite overnight",
+      "Performing exploratory testing based on a test charter"
+    ],
+    "correct": [1],
+    "explanation": "Static testing, such as reviews and static analysis, does not involve executing the software. The other options all execute the test object and are therefore forms of dynamic testing."
+  },
+  {
+    "id": "ctfl-1-004",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "Which TWO of the following are typical test objectives? Select TWO options.",
+    "options": [
+      "Localizing and fixing the defects that cause failures",
+      "Building confidence in the quality of the test object",
+      "Guaranteeing that the software is completely defect-free",
+      "Providing stakeholders with information so they can make informed decisions",
+      "Defining the coding standards that developers must follow"
+    ],
+    "correct": [1, 3],
+    "explanation": "Building confidence in quality and providing information for stakeholder decisions are typical test objectives. Localizing and fixing defects is debugging, and testing cannot guarantee defect-free software."
+  },
+  {
+    "id": "ctfl-1-005",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "A test team is invited to review user stories before implementation starts. Which statement best explains how this contributes to the success of the project?",
+    "options": [
+      "It allows the testers to fix defects directly in the user stories, reducing the developers' workload",
+      "It removes the need for dynamic testing later in the iteration",
+      "It transfers responsibility for the quality of the stories from the business analysts to the testers",
+      "It can detect defects such as ambiguities early, reducing the risk of building the wrong features"
+    ],
+    "correct": [3],
+    "explanation": "Involving testers in reviews of work products helps detect defects like ambiguities and omissions early, before they are built into the code. Reviews complement dynamic testing rather than replace it, and quality remains a shared responsibility."
+  },
+  {
+    "id": "ctfl-1-006",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Which statement correctly describes the relationship between testing, quality assurance (QA) and quality control (QC)?",
+    "options": [
+      "Testing is a form of quality control, while QA is process oriented and aims to build quality in by improving processes",
+      "Testing is a form of QA because it focuses on adherence to proper processes",
+      "QC is process oriented while QA is product oriented, so testing belongs to QA",
+      "Test results are used only by QC teams and provide no feedback for QA process improvement"
+    ],
+    "correct": [0],
+    "explanation": "Testing is a product-oriented, corrective form of QC, whereas QA is process oriented and preventive. Test results do provide feedback used by QA to improve development and test processes."
+  },
+  {
+    "id": "ctfl-1-007",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "A developer, working under severe time pressure, misunderstands a requirement and writes code that computes an incorrect discount. When the code is later executed during testing, wrong prices are displayed on screen. What best describes the incorrect code?",
+    "options": [
+      "An error",
+      "A failure",
+      "A defect",
+      "A root cause"
+    ],
+    "correct": [2],
+    "explanation": "The incorrect code is a defect (fault), introduced by the developer's error (the misunderstanding). The wrong prices displayed at run time are the failure, and time pressure is a contributing factor behind the error."
+  },
+  {
+    "id": "ctfl-1-008",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "During test execution, a test passes even though the feature under test contains a defect that the test should have detected. Which term describes this test result?",
+    "options": [
+      "A false positive",
+      "A false negative",
+      "A defect cluster",
+      "A regression"
+    ],
+    "correct": [1],
+    "explanation": "A false negative is a test that fails to detect a defect it should have found, so the defect stays undetected. A false positive is the opposite situation, where a test reports a failure although no actual defect exists."
+  },
+  {
+    "id": "ctfl-1-009",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "What is a root cause?",
+    "options": [
+      "A fundamental reason for the occurrence of a problem, whose removal can prevent similar defects from occurring again",
+      "The defect in the code that directly triggered a failure",
+      "The first failure observed during test execution",
+      "The test case that first detected a defect"
+    ],
+    "correct": [0],
+    "explanation": "A root cause is the fundamental reason behind a problem, such as lack of domain knowledge or time pressure. Removing root causes helps prevent similar defects in the future; the defect itself is only a symptom of the root cause."
+  },
+  {
+    "id": "ctfl-1-010",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "Which term refers to a human action that produces an incorrect result, such as a programmer misreading a specification?",
+    "options": [
+      "Failure",
+      "Defect",
+      "Anomaly",
+      "Error"
+    ],
+    "correct": [3],
+    "explanation": "An error (mistake) is a human action producing an incorrect result. The error may introduce a defect into a work product, and executing the defective code may then cause a failure."
+  },
+  {
+    "id": "ctfl-1-011",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "Which of the following is one of the seven testing principles?",
+    "options": [
+      "Testing shows the absence of defects",
+      "Exhaustive testing is impossible",
+      "Testing is independent of context",
+      "Defects are evenly distributed across the components of a system"
+    ],
+    "correct": [1],
+    "explanation": "Exhaustive testing is impossible is one of the seven principles. The other options contradict the principles: testing shows the presence of defects (not their absence), testing is context dependent, and defects tend to cluster rather than distribute evenly."
+  },
+  {
+    "id": "ctfl-1-012",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Analysis of the defect reports from system testing shows that most defects were found in just two of the fifteen modules. The test manager decides to focus additional testing effort on those two modules. Which testing principle supports this decision?",
+    "options": [
+      "Defects cluster together",
+      "Tests wear out",
+      "Early testing saves time and money",
+      "Testing shows the presence, not the absence, of defects"
+    ],
+    "correct": [0],
+    "explanation": "The principle that defects cluster together says a small number of components usually contain most of the defects, so predicted or observed clusters are a good basis for focusing test effort. Tests wearing out concerns repeated tests losing effectiveness, which is not the situation here."
+  },
+  {
+    "id": "ctfl-1-013",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "For six releases, the same automated regression suite has been run without any changes, and it now finds almost no new defects, even though customers are still reporting problems. Which testing principle explains this, and what is the appropriate response?",
+    "options": [
+      "Defects cluster together; the suite should be run more often on the same modules",
+      "Exhaustive testing is impossible; the suite should be reduced to save effort",
+      "Tests wear out; the existing tests should be modified and new tests should be added",
+      "Testing is context dependent; the suite should be moved to a different test environment"
+    ],
+    "correct": [2],
+    "explanation": "The principle that tests wear out (also known as the pesticide paradox) states that repeating the same tests loses effectiveness at finding new defects. The response is to modify existing tests and write new ones, not simply to rerun or shrink the old suite."
+  },
+  {
+    "id": "ctfl-1-014",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "A system passes all of its tests and every specified requirement is verified, yet after release users abandon it because it is slow and difficult to use. Which testing principle does this illustrate?",
+    "options": [
+      "Testing shows the presence, not the absence, of defects",
+      "Defects cluster together",
+      "Tests wear out",
+      "Absence-of-defects fallacy"
+    ],
+    "correct": [3],
+    "explanation": "The absence-of-defects fallacy states that verifying all specified requirements and fixing all found defects does not guarantee the system meets users' needs and expectations. The first option is about being unable to prove no defects remain, which is a different point."
+  },
+  {
+    "id": "ctfl-1-015",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "A team introduces reviews of the requirements and static analysis of the code before any dynamic testing begins. Many defects are removed at a fraction of the cost of fixing them after release. Which testing principle does this illustrate?",
+    "options": [
+      "Defects cluster together",
+      "Early testing saves time and money",
+      "Testing shows the presence, not the absence, of defects",
+      "Exhaustive testing is impossible"
+    ],
+    "correct": [1],
+    "explanation": "The early testing principle states that finding and removing defects early, for example through reviews and static analysis, is cheaper than fixing them later in development or after release. The other principles do not address the timing of defect detection."
+  },
+  {
+    "id": "ctfl-1-016",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "A team that previously tested a mobile game starts testing the control software of a medical infusion pump. They discover that their previous test approach, documentation level and coverage targets are not suitable for the new project. Which testing principle does this illustrate?",
+    "options": [
+      "Testing is context dependent",
+      "Tests wear out",
+      "Absence-of-defects fallacy",
+      "Defects cluster together"
+    ],
+    "correct": [0],
+    "explanation": "Testing is context dependent: a safety-critical medical device requires a different, more rigorous test approach than an entertainment app. There is no single universally applicable way of testing."
+  },
+  {
+    "id": "ctfl-1-017",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "An input form has twelve independent fields, each accepting many possible values. A new tester proposes to test every possible combination of inputs. According to the seven testing principles, what is the best response?",
+    "options": [
+      "Agree, because only exhaustive testing can show that no defects remain",
+      "Agree, but only after automating the tests so that all combinations can be executed overnight",
+      "Disagree, because exhaustive testing is impossible; test techniques and prioritization should be used to focus the effort",
+      "Disagree, because testing all combinations would prove the absence of defects, which is not a valid test objective"
+    ],
+    "correct": [2],
+    "explanation": "Testing everything is not feasible except in trivial cases, so test techniques, prioritization and risk should focus the effort. Automation does not make the combinatorial explosion tractable, and no amount of testing proves the absence of defects."
+  },
+  {
+    "id": "ctfl-1-018",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "Which test activity includes defining the test objectives and deciding on the test approach within constraints such as budget and timescales?",
+    "options": [
+      "Test analysis",
+      "Test implementation",
+      "Test monitoring and control",
+      "Test planning"
+    ],
+    "correct": [3],
+    "explanation": "Test planning defines the test objectives and selects the approach for meeting them within the constraints imposed by the context, such as time and budget. Test analysis determines what to test, and monitoring and control compares progress against the plan."
+  },
+  {
+    "id": "ctfl-1-019",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following correctly pair a test activity with typical testware it produces? Select TWO options.",
+    "options": [
+      "Test execution - test logs and defect reports",
+      "Test planning - test cases and test data",
+      "Test completion - test completion report and lessons learned",
+      "Test analysis - automated test scripts",
+      "Test design - test progress reports"
+    ],
+    "correct": [0, 2],
+    "explanation": "Test execution produces test logs and defect reports, and test completion produces the test completion report and lessons learned. Test cases come from test design, automated test scripts from test implementation, and test progress reports from test monitoring and control."
+  },
+  {
+    "id": "ctfl-1-020",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "What is the main purpose of test monitoring and control?",
+    "options": [
+      "To design high-level test cases based on prioritized test conditions",
+      "To compare actual test progress against the plan and take the actions necessary to meet the test objectives",
+      "To archive the testware and identify lessons learned at the end of testing",
+      "To create the detailed test execution schedule and assemble the test suites"
+    ],
+    "correct": [1],
+    "explanation": "Test monitoring gathers information to check progress against the plan, and test control takes corrective actions when needed to achieve the test objectives. Archiving belongs to test completion and scheduling test suites belongs to test implementation."
+  },
+  {
+    "id": "ctfl-1-021",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "A tester studies the test basis for a new feature, identifies the testable features, and derives and prioritizes a set of test conditions, answering the question of what to test. Which test activity is the tester performing?",
+    "options": [
+      "Test analysis",
+      "Test design",
+      "Test implementation",
+      "Test planning"
+    ],
+    "correct": [0],
+    "explanation": "Test analysis examines the test basis to identify testable features and derive prioritized test conditions, answering 'what to test'. Test design then answers 'how to test' by elaborating those conditions into test cases."
+  },
+  {
+    "id": "ctfl-1-022",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Which of the following tasks is part of test design?",
+    "options": [
+      "Creating the test execution schedule",
+      "Comparing actual test progress against the plan",
+      "Elaborating test conditions into test cases and identifying the required test data",
+      "Logging the actual results of the executed tests"
+    ],
+    "correct": [2],
+    "explanation": "Test design elaborates the test conditions into test cases and identifies needs such as test data and test environment requirements. Scheduling belongs to test implementation, progress comparison to monitoring and control, and logging to test execution."
+  },
+  {
+    "id": "ctfl-1-023",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "A tester organizes automated test scripts into test suites, arranges the suites into a test execution schedule, and builds up the test environment. Which test activity is the tester performing?",
+    "options": [
+      "Test design",
+      "Test analysis",
+      "Test execution",
+      "Test implementation"
+    ],
+    "correct": [3],
+    "explanation": "Test implementation creates and completes the testware needed for execution, including test scripts, test suites, the execution schedule and the test environment. Test execution is the later activity of actually running the tests."
+  },
+  {
+    "id": "ctfl-1-024",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "Which of the following is a typical task of test completion?",
+    "options": [
+      "Identifying lessons learned and archiving testware for later reuse",
+      "Reporting defects for failures observed during test execution",
+      "Deriving test conditions from the test basis",
+      "Assigning the testers who will execute each test procedure"
+    ],
+    "correct": [0],
+    "explanation": "Test completion occurs at project milestones and includes identifying lessons learned, writing the test completion report, and archiving or handing over testware. Defect reporting happens during test execution, and deriving test conditions is part of test analysis."
+  },
+  {
+    "id": "ctfl-1-025",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Which task typically belongs to the test management role rather than the testing role?",
+    "options": [
+      "Designing test cases from prioritized test conditions",
+      "Planning, monitoring and controlling the test activities of a project",
+      "Creating automated test scripts for the regression suite",
+      "Executing test procedures and logging the results"
+    ],
+    "correct": [1],
+    "explanation": "The test management role takes responsibility for the test process as a whole, covering test planning, monitoring and control, and completion. The testing role covers the engineering side: test analysis, design, implementation and execution."
+  },
+  {
+    "id": "ctfl-1-026",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "The test process does not look the same in every situation. Which TWO of the following are context factors that typically influence the test process of a project? Select TWO options.",
+    "options": [
+      "The number of defects that test execution will eventually reveal",
+      "The software development lifecycle model followed by the project",
+      "The seven testing principles, which are different for every project",
+      "The guarantee that exhaustive testing will be performed",
+      "Regulatory constraints that apply in the business domain"
+    ],
+    "correct": [1, 4],
+    "explanation": "Context factors influencing the test process include the software development lifecycle, the business domain and its regulatory constraints, stakeholders, team skills, and project constraints. The seven testing principles are general and do not change per project, and the future defect count is an outcome, not a context factor."
+  },
+  {
+    "id": "ctfl-1-027",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Why is it useful to maintain traceability between the elements of the test basis and the associated testware and test results?",
+    "options": [
+      "It makes test execution faster because fewer test cases need to be run",
+      "It removes the need to produce a test completion report",
+      "It makes testing auditable and allows coverage of the test basis to be evaluated against agreed criteria",
+      "It guarantees that all defects will be found before the product is released"
+    ],
+    "correct": [2],
+    "explanation": "Traceability supports coverage evaluation against measurable criteria, makes testing auditable, and helps relate test results to stakeholder terms. It does not speed up execution or guarantee that all defects are found."
+  },
+  {
+    "id": "ctfl-1-028",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "A requirement is changed late in the project. Thanks to the traceability maintained between the requirements and the testware, the team can quickly determine which of the following?",
+    "options": [
+      "Which test cases are affected by the change and need to be updated and re-executed",
+      "Which developers introduced the most defects during coding",
+      "Whether the changed requirement can be implemented within the project budget",
+      "How many undetected defects remain in the unchanged requirements"
+    ],
+    "correct": [0],
+    "explanation": "Traceability between the test basis and testware supports impact analysis: when a requirement changes, the linked test cases that must be updated and rerun can be identified quickly. Traceability does not measure developer performance or predict remaining defects."
+  },
+  {
+    "id": "ctfl-1-029",
+    "chapter": "1",
+    "kLevel": "K1",
+    "stem": "Which of the following is a generic skill that is particularly important for testers?",
+    "options": [
+      "The ability to quickly fix defects in the production code",
+      "Avoiding communication with developers in order to preserve independence",
+      "Willingness to accept requirements without questioning them",
+      "Curiosity, attention to detail and good communication skills"
+    ],
+    "correct": [3],
+    "explanation": "Important tester skills include curiosity, professional pessimism, a critical eye, attention to detail, and good communication for constructive interaction with stakeholders. Fixing code is a developer task, and testers should question assumptions rather than accept everything as given."
+  },
+  {
+    "id": "ctfl-1-030",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Which statement about the whole-team approach is correct?",
+    "options": [
+      "Testers alone are responsible for the quality of the delivered product",
+      "Any team member with the necessary knowledge and skills can perform testing tasks, and everyone shares responsibility for quality",
+      "Testers must not help business representatives create acceptance tests, in order to remain unbiased",
+      "The whole-team approach must be applied in every context, including safety-critical projects that require a high level of test independence"
+    ],
+    "correct": [1],
+    "explanation": "In the whole-team approach any member with the required skills can perform any task, and the whole team is responsible for quality; testers typically collaborate closely with developers and business representatives. The approach is not always appropriate, for example in safety-critical contexts requiring high independence of testing."
+  },
+  {
+    "id": "ctfl-1-031",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following are potential benefits of independence of testing? Select TWO options.",
+    "options": [
+      "Independent testers are likely to recognize different kinds of failures than developers, because of their different backgrounds and perspectives",
+      "Independent testers can take over full responsibility for quality from the developers",
+      "Independent testers do not need any domain or technical knowledge because they are unbiased",
+      "Independent testers can verify, challenge or disprove assumptions made by stakeholders during specification and implementation",
+      "Independent testing removes the need for developers to test their own code"
+    ],
+    "correct": [0, 3],
+    "explanation": "Independent testers bring different perspectives, so they find different kinds of failures, and they can challenge stakeholder assumptions. Developers losing their sense of responsibility for quality is a drawback of independence, not a benefit, and developers should still test their own work."
+  },
+  {
+    "id": "ctfl-1-032",
+    "chapter": "1",
+    "kLevel": "K2",
+    "stem": "Which of the following is a potential drawback of a high level of independence of testing?",
+    "options": [
+      "Independent testers tend to confirm the developers' assumptions instead of challenging them",
+      "Independent testers can only find the same kinds of failures that the developers would find",
+      "Independent testers may be isolated from the development team, leading to communication problems and a lack of collaboration",
+      "Independent testers are unable to report test results objectively"
+    ],
+    "correct": [2],
+    "explanation": "Drawbacks of independence include isolation from the development team, communication delays, an adversarial relationship, and developers losing a sense of responsibility for quality. The first two options describe the opposite of what independence brings, since independent testers challenge assumptions and see different failures."
+  }
+]

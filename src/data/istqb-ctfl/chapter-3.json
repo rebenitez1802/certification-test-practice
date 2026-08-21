@@ -1,0 +1,228 @@
+[
+  {
+    "id": "ctfl-3-001",
+    "chapter": "3",
+    "kLevel": "K1",
+    "stem": "Which of the following work products is typically NOT suitable for examination by static testing?",
+    "options": [
+      "A requirements specification",
+      "Source code that has not yet been executed",
+      "A test plan for the next release",
+      "Third-party executable code delivered without any readable structure"
+    ],
+    "correct": [3],
+    "explanation": "Static testing can be applied to almost any work product that participants know how to read and understand, including requirements, source code, and test plans. Work products that are hard for humans to interpret, such as executable third-party code without readable structure, are not suitable for static testing."
+  },
+  {
+    "id": "ctfl-3-002",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "During a code analysis session, Kenji finds a block of code that can never be executed because the condition guarding it is always false. Which statement about this defect is correct?",
+    "options": [
+      "It is a typical defect that is easier to find with static testing than with dynamic testing",
+      "It can only be detected by executing the code with suitable test data",
+      "It is a failure that must be reproduced before it can be reported",
+      "It can only be detected by performance testing under load"
+    ],
+    "correct": [0],
+    "explanation": "Unreachable code is a classic example of a defect more easily found by static testing, since dynamic testing can never exercise code that cannot be reached. It is a defect, not a failure, because the code was never executed."
+  },
+  {
+    "id": "ctfl-3-003",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "A project manager asks why the team should invest time in reviewing the requirements specification before any code is written. Which answer best describes the value of static testing?",
+    "options": [
+      "It guarantees that no defects will remain in the delivered software",
+      "It detects defects early, when they are cheaper to find and remove than in later phases",
+      "It replaces the need for dynamic testing later in the project",
+      "It measures the actual response times of the system under realistic conditions"
+    ],
+    "correct": [1],
+    "explanation": "A major value of static testing is early defect detection: defects found in requirements are far cheaper to fix than the same defects found in testing or production. Static testing complements dynamic testing rather than replacing it, and no testing can guarantee the absence of defects."
+  },
+  {
+    "id": "ctfl-3-004",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "Which of the following best describes a key difference between static testing and dynamic testing?",
+    "options": [
+      "Static testing requires test cases, while dynamic testing does not",
+      "Static testing can only be applied to code, while dynamic testing applies to any work product",
+      "Static testing finds defects directly in the work product, while dynamic testing exposes failures caused by defects when the software is executed",
+      "Static testing is performed only by tools, while dynamic testing is performed only by people"
+    ],
+    "correct": [2],
+    "explanation": "Static testing examines a work product without executing it and finds defects directly, while dynamic testing executes the software and reveals failures from which defects are then diagnosed. Static testing applies to many work products beyond code and can be done by people or tools."
+  },
+  {
+    "id": "ctfl-3-005",
+    "chapter": "3",
+    "kLevel": "K1",
+    "stem": "Which of the following is a benefit of early and frequent feedback from stakeholders?",
+    "options": [
+      "It removes the need to write acceptance criteria for user stories",
+      "It helps avoid misunderstandings about requirements and costly rework late in development",
+      "It allows the test team to skip static testing of the requirements",
+      "It ensures that developers no longer need to communicate with testers"
+    ],
+    "correct": [1],
+    "explanation": "Early and frequent stakeholder feedback allows potential quality problems and misunderstandings about requirements to be communicated and resolved early, focusing the team on the features of highest value and avoiding expensive rework. It does not eliminate the need for acceptance criteria, static testing, or team communication."
+  },
+  {
+    "id": "ctfl-3-006",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "Before a review of the architecture document starts, Amara and her team define the scope of the review, estimate the effort required, and agree the exit criteria. Which review process activity are they performing?",
+    "options": [
+      "Individual review",
+      "Communication and analysis",
+      "Fixing and reporting",
+      "Planning"
+    ],
+    "correct": [3],
+    "explanation": "Defining the scope, effort, review characteristics, and entry and exit criteria happens during the planning activity of the review process. Individual review, communication and analysis, and fixing and reporting all occur later in the process."
+  },
+  {
+    "id": "ctfl-3-007",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "Dmitri receives the test plan to be reviewed, reads it on his own, and notes down all the anomalies he identifies before the review meeting. Which review process activity is Dmitri performing?",
+    "options": [
+      "Individual review",
+      "Review initiation",
+      "Planning",
+      "Fixing and reporting"
+    ],
+    "correct": [0],
+    "explanation": "During individual review, each reviewer assesses the work product alone and records the anomalies, recommendations, and questions they find. Review initiation is about ensuring everyone has access and is prepared to start, which happens before the individual review."
+  },
+  {
+    "id": "ctfl-3-008",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "In a review meeting, Lucia's team discusses the anomalies that reviewers logged, decides for each one whether it is a defect, and agrees whether the work product can be accepted or needs changes. Which review process activity does this describe?",
+    "options": [
+      "Planning",
+      "Individual review",
+      "Communication and analysis",
+      "Review initiation"
+    ],
+    "correct": [2],
+    "explanation": "In communication and analysis, the identified anomalies are discussed, analyzed, and given a status, and decisions are made about the quality level of the reviewed work product and required follow-up. Individual review is done alone before this discussion takes place."
+  },
+  {
+    "id": "ctfl-3-009",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "In a review meeting, Priya collates the anomalies raised by the reviewers and records the decisions made during the meeting. Which review role is Priya performing?",
+    "options": [
+      "Moderator",
+      "Scribe",
+      "Review leader",
+      "Author"
+    ],
+    "correct": [1],
+    "explanation": "The scribe collates the anomalies found during the review and records information such as decisions and open points from the review meeting. The moderator facilitates the meeting, the review leader organizes the review, and the author created the work product."
+  },
+  {
+    "id": "ctfl-3-010",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "During a heated review meeting, Marcus makes sure the discussion stays on the work product, gives everyone a chance to speak, and mediates when two reviewers disagree strongly. Which review role is Marcus performing?",
+    "options": [
+      "Author",
+      "Manager",
+      "Scribe",
+      "Facilitator"
+    ],
+    "correct": [3],
+    "explanation": "The facilitator, also called moderator, ensures the effective running of review meetings, mediates between differing viewpoints, and is often key to the review's success. The manager decides what is reviewed and provides resources, and the scribe records outcomes."
+  },
+  {
+    "id": "ctfl-3-011",
+    "chapter": "3",
+    "kLevel": "K1",
+    "stem": "In a formal review, which role decides what is to be reviewed and provides resources, such as staff and time, for the review?",
+    "options": [
+      "Manager",
+      "Scribe",
+      "Author",
+      "Reviewer"
+    ],
+    "correct": [0],
+    "explanation": "The manager decides what is to be reviewed and provides the resources, such as staff and time, needed for the review. The review leader, in contrast, takes overall responsibility for the review itself, such as deciding who will be involved and when and where it will take place."
+  },
+  {
+    "id": "ctfl-3-012",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "Tomas wrote a design document and now leads a session in which he guides colleagues through the document step by step, explaining his reasoning and gathering their comments. The session has little preparation beforehand. Which review type does this best describe?",
+    "options": [
+      "Inspection",
+      "Technical review",
+      "Walkthrough",
+      "Informal review"
+    ],
+    "correct": [2],
+    "explanation": "A walkthrough is led by the author, who guides the participants through the work product; individual preparation is optional. An inspection is the most formal review type, follows a defined process, and is not led by the author."
+  },
+  {
+    "id": "ctfl-3-013",
+    "chapter": "3",
+    "kLevel": "K1",
+    "stem": "Which review type is the MOST formal, following a complete generic process, using rules and checklists, collecting metrics, and never being led by the author of the work product?",
+    "options": [
+      "Walkthrough",
+      "Inspection",
+      "Informal review",
+      "Technical review"
+    ],
+    "correct": [1],
+    "explanation": "Inspection is the most formal review type: it follows the complete generic review process, uses defined roles and rules, gathers metrics for process improvement, and is led by a trained facilitator rather than the author. Walkthroughs are led by the author, and informal reviews follow no defined process."
+  },
+  {
+    "id": "ctfl-3-014",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "Fatima organizes a review of an interface specification in which independent technical experts examine the document, discuss the anomalies found, and aim to reach consensus and make decisions on the technical content. The review is led by a moderator, not by the author. Which review type is this?",
+    "options": [
+      "Technical review",
+      "Walkthrough",
+      "Informal review",
+      "Pair programming"
+    ],
+    "correct": [0],
+    "explanation": "A technical review involves technically qualified reviewers, is led by a moderator or facilitator rather than the author, and aims to gain consensus and make decisions about technical problems. A walkthrough is led by the author, and an informal review has no defined process or required meeting."
+  },
+  {
+    "id": "ctfl-3-015",
+    "chapter": "3",
+    "kLevel": "K1",
+    "stem": "Which of the following are success factors for reviews? Select TWO options.",
+    "options": [
+      "Defining clear objectives and measurable exit criteria for the review",
+      "Reviewing the whole document in a single long session regardless of its size",
+      "Using review findings to evaluate the performance of the author",
+      "Choosing a review type that is suitable for the objectives and the type of work product",
+      "Allowing management to attend so defects can be linked to individual appraisals"
+    ],
+    "correct": [0, 3],
+    "explanation": "Successful reviews need clear objectives with measurable exit criteria, and a review type appropriate to the objectives, the work product, and the participants. Reviewing in small chunks is recommended, and review results must never be used to evaluate people, as this destroys trust and cooperation."
+  },
+  {
+    "id": "ctfl-3-016",
+    "chapter": "3",
+    "kLevel": "K2",
+    "stem": "A team is deciding which review type to use for different work products. Which TWO of the following statements are correct? Select TWO options.",
+    "options": [
+      "An informal review must always produce a formal review report with collected metrics",
+      "An informal review does not follow a defined process and does not require a review meeting",
+      "A walkthrough is always led by an independent, trained moderator",
+      "An inspection may be led by the author because the author knows the work product best",
+      "A walkthrough can serve purposes such as evaluating quality, training participants, and considering alternative approaches"
+    ],
+    "correct": [1, 4],
+    "explanation": "Informal reviews follow no defined process, do not require a meeting, and may not even be documented, while walkthroughs, which are led by the author, can be used to evaluate quality, train participants, achieve consensus, and consider alternatives. Inspections are never led by the author, and it is walkthroughs, not inspections, that the author leads."
+  }
+]

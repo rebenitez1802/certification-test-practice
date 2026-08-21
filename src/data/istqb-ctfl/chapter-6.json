@@ -1,0 +1,115 @@
+[
+  {
+    "id": "ctfl-6-001",
+    "chapter": "6",
+    "kLevel": "K1",
+    "stem": "Which class of test tools primarily supports the management of the test process, including tracking testware and establishing traceability between requirements, test cases and defects?",
+    "options": [
+      "Test execution tools",
+      "Static testing tools",
+      "Test management tools",
+      "Non-functional testing tools"
+    ],
+    "correct": [2],
+    "explanation": "Test management tools (including application lifecycle management and defect management tools) support the overall test process by managing testware, scheduling, reporting and traceability. Execution tools run tests, static testing tools analyze work products without execution, and non-functional testing tools address characteristics such as performance that are hard to test manually."
+  },
+  {
+    "id": "ctfl-6-002",
+    "chapter": "6",
+    "kLevel": "K1",
+    "stem": "A tool checks source code against a set of coding standards and reports violations without ever executing the code. To which class of test tools does this tool belong?",
+    "options": [
+      "Static testing tools",
+      "Test execution and coverage tools",
+      "Test design and implementation tools",
+      "DevOps tools"
+    ],
+    "correct": [0],
+    "explanation": "Static testing tools support static analysis activities, such as checking code against coding standards, without executing the code. Execution and coverage tools require the code to run, design and implementation tools help generate testware, and DevOps tools support the delivery pipeline."
+  },
+  {
+    "id": "ctfl-6-003",
+    "chapter": "6",
+    "kLevel": "K2",
+    "stem": "A team automates its regression test suite so the same tests run overnight after every build. Which benefit of test automation is MOST directly illustrated by this scenario?",
+    "options": [
+      "Automation removes the need for test analysis and design",
+      "Automation guarantees that no regression defects will be released",
+      "Automated tests always find more defects than manual tests",
+      "Greater consistency and repeatability of test execution, saving time"
+    ],
+    "correct": [3],
+    "explanation": "Running the same suite the same way after every build shows the automation benefits of repeatability, consistency and reduced repetitive manual work, freeing time for other activities. Automation does not eliminate the need for test analysis and design, cannot guarantee the absence of defects, and does not inherently find more defects than manual testing."
+  },
+  {
+    "id": "ctfl-6-004",
+    "chapter": "6",
+    "kLevel": "K2",
+    "stem": "A test manager promises stakeholders that buying a test execution tool will cut testing costs by half within the first month, before the team has any automation experience. Which risk of test automation does this situation BEST describe?",
+    "options": [
+      "Vendor may go out of business or retire the tool",
+      "Unrealistic expectations about the tool's benefits and ease of use",
+      "The tool may produce inaccurate coverage measurements",
+      "Test data may become corrupted during automated runs"
+    ],
+    "correct": [1],
+    "explanation": "Expecting large, immediate cost savings from a newly introduced tool, without accounting for the initial effort and learning curve, is the classic risk of unrealistic expectations, including expectations about functionality and ease of use. Vendor issues are a different automation risk, and the other options are operational problems rather than the risk described here."
+  },
+  {
+    "id": "ctfl-6-005",
+    "chapter": "6",
+    "kLevel": "K2",
+    "stem": "Which of the following are benefits of using test automation? Select TWO options.",
+    "options": [
+      "It provides more objective assessment through consistent measures and coverage data",
+      "It eliminates the need to maintain testware when the software under test changes",
+      "It ensures that all defects in the software will be detected",
+      "It reduces the time spent on repetitive manual tasks, such as regression testing and re-entering test data",
+      "It makes exploratory testing unnecessary"
+    ],
+    "correct": [0, 3],
+    "explanation": "Automation provides objective measures (for example coverage and consistent metrics) and saves time on repetitive tasks such as regression test execution. Maintenance of automated testware actually increases when the software changes, and no form of testing can detect all defects or replace approaches such as exploratory testing that are better suited to human evaluation."
+  },
+  {
+    "id": "ctfl-6-006",
+    "chapter": "6",
+    "kLevel": "K1",
+    "stem": "Which of the following is an example of a DevOps tool that supports testing?",
+    "options": [
+      "A tool that manages defect reports and their lifecycle",
+      "A continuous integration tool that automatically builds the software and triggers the automated test suite on each commit",
+      "A tool used to record review comments during a walkthrough",
+      "A usability evaluation tool that captures user interaction sessions"
+    ],
+    "correct": [1],
+    "explanation": "DevOps tools support the delivery pipeline, including build automation and continuous integration that automatically triggers test execution. Defect management tools belong to the test management class, review support belongs to static testing tools, and usability evaluation tools belong to non-functional testing tools."
+  },
+  {
+    "id": "ctfl-6-007",
+    "chapter": "6",
+    "kLevel": "K2",
+    "stem": "An organization licensed a commercial test execution tool three years ago. The vendor has now been acquired and announces that the tool will no longer be supported or updated. Which risk of test automation has materialized?",
+    "options": [
+      "Over-reliance on the tool as a replacement for human testing",
+      "Underestimation of the effort needed to introduce the tool",
+      "Vendor-related risk, such as the vendor retiring the tool or ending support",
+      "Neglecting manual testing that would have found more defects"
+    ],
+    "correct": [2],
+    "explanation": "A vendor being acquired and dropping support for a tool is a vendor-related risk, which also covers a vendor going out of business, selling the tool or providing poor support. The other options are genuine automation risks, but none of them matches the situation described."
+  },
+  {
+    "id": "ctfl-6-008",
+    "chapter": "6",
+    "kLevel": "K2",
+    "stem": "A team relies almost entirely on its automated checks and stops performing manual testing of new user interface features, even though usability problems keep reaching production. Which statement BEST explains what is going wrong?",
+    "options": [
+      "The team is over-relying on the tool and neglecting testing activities that are better done by humans, such as evaluating usability",
+      "The team has too few automated test cases, so more scripts should be added to cover usability",
+      "The tool is producing false positives that hide the usability defects",
+      "The automated tests were designed at the wrong test level"
+    ],
+    "correct": [0],
+    "explanation": "A known risk of test automation is over-reliance on tools, including ignoring the need for human critical thinking and neglecting aspects of testing, such as usability evaluation, that are better suited to manual testing. Adding more scripts would not address usability, and the scenario gives no evidence of false positives or an incorrect test level."
+  }
+]

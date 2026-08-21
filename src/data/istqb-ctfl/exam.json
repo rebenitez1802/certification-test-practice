@@ -1,0 +1,21 @@
+{
+  "id": "istqb-ctfl",
+  "name": "ISTQB Certified Tester Foundation Level",
+  "shortName": "ISTQB CTFL",
+  "syllabusVersion": "v4.0",
+  "description": "Entry-level software testing certification covering test fundamentals, testing in the SDLC, static testing, test analysis and design, test management, and test tools.",
+  "chapters": [
+    { "id": "1", "title": "Fundamentals of Testing" },
+    { "id": "2", "title": "Testing Throughout the SDLC" },
+    { "id": "3", "title": "Static Testing" },
+    { "id": "4", "title": "Test Analysis and Design" },
+    { "id": "5", "title": "Managing the Test Activities" },
+    { "id": "6", "title": "Test Tools" }
+  ],
+  "mock": {
+    "totalQuestions": 40,
+    "timeLimitMinutes": 60,
+    "passPercent": 65,
+    "distribution": { "1": 8, "2": 6, "3": 4, "4": 11, "5": 9, "6": 2 }
+  }
+}

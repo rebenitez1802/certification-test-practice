@@ -1,0 +1,313 @@
+[
+  {
+    "id": "ctfl-4-023",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which of the following correctly describes how statement coverage is measured in white-box testing?",
+    "options": [
+      "As the number of lines of source code, including comments and declarations, that the test cases read, divided by the total number of lines in the file",
+      "As the number of executable statements exercised by the test cases, divided by the total number of executable statements in the code, expressed as a percentage",
+      "As the number of decision outcomes exercised by the test cases, divided by the total number of decision outcomes in the code, expressed as a percentage",
+      "As the number of requirements exercised by the test cases, divided by the total number of requirements in the specification, expressed as a percentage"
+    ],
+    "correct": [1],
+    "explanation": "Statement coverage is the percentage of executable statements exercised by the tests: executed executable statements divided by all executable statements in the code. Counting comment or declaration lines is wrong because coverage considers only executable statements. Decision outcomes relate to branch coverage, not statement coverage. Requirements coverage is a black-box coverage measure based on the test basis, not on the code."
+  },
+  {
+    "id": "ctfl-4-024",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Why does achieving 100% branch coverage guarantee 100% statement coverage, while achieving 100% statement coverage does not guarantee 100% branch coverage?",
+    "options": [
+      "Because branch coverage counts every statement twice, once for each possible outcome, so it is always numerically higher than statement coverage",
+      "Because statement coverage can only be measured after branch coverage has already been achieved by the same test suite",
+      "Because every statement lies on some branch, so exercising all branches executes all statements, whereas all statements can be executed without exercising every branch, for example the empty false outcome of an IF with no ELSE part",
+      "Because branch coverage requires exercising every possible path through the code, which necessarily includes every statement and every combination of conditions"
+    ],
+    "correct": [2],
+    "explanation": "Branch testing subsumes statement testing: since every executable statement is reached via some branch, exercising all branches executes all statements. The reverse does not hold because a decision such as an IF with no ELSE has a false outcome containing no statements; all statements can be executed while that false branch is never taken. Branch coverage does not count statements twice, does not depend on measuring statement coverage first, and does not require covering all paths (path coverage is a stronger criterion than branch coverage)."
+  },
+  {
+    "id": "ctfl-4-025",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A function consists of the following pseudocode: statement S1 is executed; then IF (x > 10) THEN statement S2 is executed END IF; then statement S3 is executed. What is the minimum number of test cases required to achieve 100% statement coverage, and the minimum number required to achieve 100% branch coverage?",
+    "options": [
+      "1 test case for 100% statement coverage and 2 test cases for 100% branch coverage",
+      "1 test case for 100% statement coverage and 1 test case for 100% branch coverage",
+      "2 test cases for 100% statement coverage and 2 test cases for 100% branch coverage",
+      "2 test cases for 100% statement coverage and 3 test cases for 100% branch coverage"
+    ],
+    "correct": [0],
+    "explanation": "A single test case with x greater than 10 (for example x = 15) executes S1, S2 and S3, which is all three statements, so 1 test case gives 100% statement coverage. For branch coverage, both outcomes of the IF decision must be exercised: one test with x > 10 true and one test with x > 10 false (for example x = 5). That requires 2 test cases. One test case cannot achieve 100% branch coverage because a single execution takes only one outcome of the decision, and there is no third decision outcome that would require a third test."
+  },
+  {
+    "id": "ctfl-4-026",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A function contains exactly four executable statements. Statement S1 is always executed first. Then an IF statement executes S2 when its condition is true and S3 (in the ELSE part) when the condition is false. Finally, statement S4 is always executed. A single test case is run in which the condition evaluates to true. Considering only the statements S1, S2, S3 and S4, what statement coverage is achieved?",
+    "options": [
+      "50%",
+      "66%",
+      "75%",
+      "100%"
+    ],
+    "correct": [2],
+    "explanation": "With the condition true, the executed statements are S1, S2 and S4. S3 in the ELSE part is not executed. Statement coverage = executed statements / total statements = 3 / 4 = 75%. 50% would mean only 2 of 4 statements were executed, 66% would correspond to 2 of 3 statements, and 100% would require a second test case with the condition false to execute S3."
+  },
+  {
+    "id": "ctfl-4-027",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A function contains an IF-ELSE statement followed by (not nested inside) a WHILE loop. The IF condition and the number of loop iterations are controlled independently by the input parameters, and the function always terminates. What is the minimum number of test cases needed to achieve 100% branch coverage?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": [1],
+    "explanation": "There are four branches: the true and false outcomes of the IF, and the true and false outcomes of the WHILE condition. Test case 1: IF condition true, and inputs that make the loop iterate at least once; this covers the IF true branch, the WHILE true branch, and also the WHILE false branch when the loop exits. Test case 2: IF condition false, with zero loop iterations; this covers the IF false branch (and the WHILE false branch again). All four branches are covered by 2 test cases. One test case is not enough because a single execution can take only one outcome of the IF. Three or four test cases are more than the minimum."
+  },
+  {
+    "id": "ctfl-4-028",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A function contains three sequential IF statements, none of which has an ELSE part, and each condition depends on a different input parameter. Each IF statement has two branches (a true outcome and an empty false outcome), giving six branches in total. A single test case is executed in which all three conditions evaluate to true. What branch coverage is achieved?",
+    "options": [
+      "100%",
+      "75%",
+      "33%",
+      "50%"
+    ],
+    "correct": [3],
+    "explanation": "The single test case exercises the true branch of each of the three IF statements, which is 3 branches. The three empty false branches are not exercised. Branch coverage = exercised branches / total branches = 3 / 6 = 50%. 100% would additionally require the false outcome of each decision, 75% would correspond to covering some but not all false outcomes (for example a second test making some conditions false), and 33% would be 2 of 6 branches, which does not match this test case."
+  },
+  {
+    "id": "ctfl-4-029",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "Consider the following pseudocode: statement S1 is executed; then IF (a > 0) THEN statement S2 is executed, and inside that IF there is a nested IF (b > 0) THEN statement S3 is executed END IF; END IF; finally statement S4 is executed. A single test case with a = -1 is executed. Considering only the four statements S1 to S4, what statement coverage is achieved?",
+    "options": [
+      "50%",
+      "75%",
+      "25%",
+      "100%"
+    ],
+    "correct": [0],
+    "explanation": "With a = -1 the outer condition (a > 0) is false, so neither S2 nor the nested IF containing S3 is reached. Only S1 and S4 are executed. Statement coverage = 2 / 4 = 50%. 25% would be 1 of 4 statements, 75% would be 3 of 4 (for example a test with a > 0 but b not greater than 0), and 100% would require a test with both a > 0 and b > 0 so that S2 and S3 are also executed."
+  },
+  {
+    "id": "ctfl-4-030",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A function contains two sequential IF-ELSE statements. The first tests whether x < 0 and the second tests whether y > 100, so there are four branches in total. The following two test cases are executed: T1 with x = -5 and y = 150, and T2 with x = 7 and y = 200. What branch coverage is achieved?",
+    "options": [
+      "50%",
+      "100%",
+      "75%",
+      "25%"
+    ],
+    "correct": [2],
+    "explanation": "T1 (x = -5, y = 150) exercises the true branch of the first decision (x < 0 is true) and the true branch of the second decision (y > 100 is true). T2 (x = 7, y = 200) exercises the false branch of the first decision (x < 0 is false) and again the true branch of the second decision. Covered branches: first decision true, first decision false, second decision true, which is 3 of 4 branches. The false branch of the second decision (y > 100 false) is never taken because both tests use y > 100. Branch coverage = 3 / 4 = 75%. 100% would require a test with y not greater than 100; 50% would be only 2 of 4 branches."
+  },
+  {
+    "id": "ctfl-4-031",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following statements about white-box coverage are correct? Select TWO options.",
+    "options": [
+      "Achieving 100% branch coverage guarantees that 100% statement coverage is also achieved",
+      "Achieving 100% statement coverage guarantees that every combination of condition values in the code has been tested",
+      "Statement coverage is measured as the number of lines of source code, including comments and blank lines, executed by the tests",
+      "Even 100% branch coverage cannot show that the code fails to implement a requirement that was omitted from the code",
+      "Achieving 100% branch coverage guarantees that all defects in the code have been detected"
+    ],
+    "correct": [0, 3],
+    "explanation": "Branch testing subsumes statement testing, so 100% branch coverage always gives 100% statement coverage. White-box coverage measures are based on the code as written, so no code coverage level can reveal defects of omission, where required functionality was simply not implemented. Statement coverage does not guarantee testing of condition value combinations (that relates to stronger criteria than statement coverage), statement coverage considers only executable statements and not comments or blank lines, and no coverage level guarantees that all defects have been found, since coverage measures which code was exercised, not the correctness of its results."
+  },
+  {
+    "id": "ctfl-4-032",
+    "chapter": "4",
+    "kLevel": "K1",
+    "stem": "Which of the following best describes error guessing?",
+    "options": [
+      "A technique in which random input values are generated automatically by a tool and fed into the test object",
+      "A technique in which test cases are derived systematically from a formal model of the required behavior",
+      "A technique in which end users are interviewed to predict which features they will use most often",
+      "A technique in which testers anticipate the occurrence of errors, defects and failures, based on their knowledge and experience, and design tests to expose them"
+    ],
+    "correct": [3],
+    "explanation": "Error guessing is an experience-based technique: testers use their knowledge of how the application has worked in the past, typical mistakes developers make, and failures seen in other applications to anticipate errors, defects and failures and to design tests that expose them. Automated random input generation is fuzzing or random testing, deriving tests from a formal model is a black-box (specification-based) approach, and interviewing users about feature usage is not a test design technique."
+  },
+  {
+    "id": "ctfl-4-033",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "A test team wants to apply error guessing in a methodical way. Which of the following approaches achieves this and is known as a fault attack?",
+    "options": [
+      "Create a list of possible errors, defects and failures, based on experience, defect data and common knowledge about why software fails, and design tests that will expose the associated defects or failures",
+      "Execute the existing scripted regression suite twice and compare the results of the two runs to identify intermittent failures",
+      "Ask the developers to list the parts of the code with the highest branch coverage and concentrate all testing effort there",
+      "Divide the input domain into equivalence partitions and select one test value from each partition, including invalid partitions"
+    ],
+    "correct": [0],
+    "explanation": "A fault attack is a methodical form of error guessing: the team builds a list of possible errors, defects and failures (drawing on experience, defect and failure data, and common knowledge about why software fails) and then designs tests aimed at exposing those defects and causing those failures. Re-running a regression suite is not error guessing, concentrating on code that already has high coverage is not a defect-anticipation approach, and selecting values from equivalence partitions is the black-box technique of equivalence partitioning, not error guessing."
+  },
+  {
+    "id": "ctfl-4-034",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "In which of the following situations is exploratory testing likely to be MOST useful?",
+    "options": [
+      "When the contract demands documented traceability from every test case to a numbered requirement before any test execution starts",
+      "When an identical set of regression tests must be re-executed in exactly the same way in every release",
+      "When there are few or inadequate specifications and there is significant time pressure on the testing",
+      "When the testers assigned to the work have no knowledge of the application domain or of testing techniques"
+    ],
+    "correct": [2],
+    "explanation": "Exploratory testing is most useful when specifications are few or inadequate and when there is significant time pressure, because the tester simultaneously learns about the test object, designs tests, executes them and evaluates the results. It is also useful as a complement to more formal techniques. It is a poor fit when full pre-documented traceability is contractually required or when tests must be repeated identically each release, since exploratory tests are not fully scripted in advance. Its effectiveness depends on the tester's experience, domain knowledge and skills, so inexperienced testers make it less effective, not more."
+  },
+  {
+    "id": "ctfl-4-035",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which of the following statements about session-based exploratory testing is correct?",
+    "options": [
+      "All test cases are fully scripted with detailed steps and expected results before the session, and the session only executes those scripts",
+      "The testing is conducted within a defined time-box, the tester uses a test charter containing the test objectives to guide the session, and the results are documented, for example in session sheets",
+      "The test charter is written only after the session finishes, so that it accurately reflects what was actually tested during the session",
+      "No documentation is produced during or after the session, because documenting results would contradict the exploratory nature of the testing"
+    ],
+    "correct": [1],
+    "explanation": "In session-based exploratory testing, the work is performed within a defined time-box, guided by a test charter prepared beforehand that states the test objectives, and the tester documents the steps followed and the observations made, for example using session sheets. Fully scripting all steps in advance contradicts exploratory testing, in which design and execution happen simultaneously. The charter guides the session, so it is created before the session, not afterwards. Documentation is produced, which is precisely what makes the session-based approach more structured and manageable than free-form exploration."
+  },
+  {
+    "id": "ctfl-4-036",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following statements about checklist-based testing are correct? Select TWO options.",
+    "options": [
+      "Checklists are derived from the internal structure of the code so that their use guarantees 100% branch coverage",
+      "In the absence of detailed test cases, checklist-based testing can provide guidelines and a degree of consistency in the testing",
+      "Because the checklist items are the same, any two testers using the same checklist will always perform exactly the same tests and get identical coverage",
+      "Every checklist item must be written as a detailed step-by-step script with concrete input values and exact expected results",
+      "Checklists should be updated regularly based on defect analysis, but they should not become too long or too detailed"
+    ],
+    "correct": [1, 4],
+    "explanation": "Checklist-based testing designs and executes tests to cover conditions from a checklist built from experience, knowledge of what is important for the user, and an understanding of why and how software fails. Where detailed test cases are absent, checklists give guidelines and some consistency. Checklists should be regularly updated through defect analysis, yet kept from growing too long or too detailed so they remain usable. Checklists are not derived from code structure and give no coverage guarantee. Since checklist items are often high-level and lack concrete expected results, different testers may interpret them differently, giving potentially greater coverage variety but less repeatability, so two testers will not necessarily perform identical tests, and items are not detailed scripts."
+  },
+  {
+    "id": "ctfl-4-037",
+    "chapter": "4",
+    "kLevel": "K1",
+    "stem": "In checklist-based testing, a tester designs, implements and executes tests to cover:",
+    "options": [
+      "all pairs of input parameter values, generated by a combinatorial tool",
+      "every decision outcome in the source code of the test object",
+      "test conditions from a checklist created on the basis of experience, knowledge about what is important for the user, and an understanding of why and how software fails",
+      "the transitions between states in a state diagram of the test object"
+    ],
+    "correct": [2],
+    "explanation": "By definition, in checklist-based testing the tester covers test conditions from a checklist, and such checklists are built from experience, knowledge about what is important for the user, and an understanding of why and how software fails. Covering all pairs of parameter values describes pairwise (combinatorial) testing, covering decision outcomes describes branch testing (a white-box technique), and covering transitions describes state transition testing (a black-box technique)."
+  },
+  {
+    "id": "ctfl-4-038",
+    "chapter": "4",
+    "kLevel": "K1",
+    "stem": "According to the 3 C's, a good user story is composed of which three elements?",
+    "options": [
+      "Card, Conversation, Confirmation",
+      "Card, Criteria, Completion",
+      "Conversation, Collaboration, Confirmation",
+      "Card, Conversation, Certification"
+    ],
+    "correct": [0],
+    "explanation": "The 3 C's of a good user story are Card, Conversation and Confirmation. The card is the medium describing the story (for example an index card or an entry in an electronic board), the conversation explains how the software will be used and captures collaboration between stakeholders, and the confirmation is the acceptance criteria against which the story is verified. The other options replace one of these elements with a plausible but incorrect term such as criteria, collaboration, completion or certification."
+  },
+  {
+    "id": "ctfl-4-039",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "During backlog refinement, a team drafts a user story that cannot be worked on until three other stories are finished, and that is so large it cannot be completed within a single iteration. According to the INVEST characteristics of good user stories, which two characteristics does this story fail to satisfy?",
+    "options": [
+      "Negotiable and Testable",
+      "Valuable and Estimable",
+      "Estimable and Testable",
+      "Independent and Small"
+    ],
+    "correct": [3],
+    "explanation": "INVEST stands for Independent, Negotiable, Valuable, Estimable, Small and Testable. A story that cannot start until three other stories are finished violates Independent, and a story too large to complete within one iteration violates Small. Nothing in the scenario indicates that the story cannot be discussed and refined (Negotiable), that it lacks value to a stakeholder (Valuable), that its effort cannot be estimated (Estimable), or that acceptance tests cannot be defined for it (Testable)."
+  },
+  {
+    "id": "ctfl-4-040",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which of the following best describes a purpose of acceptance criteria for a user story?",
+    "options": [
+      "To provide the development team with a precise estimate of the cost and duration of implementing the user story",
+      "To define the scope of the user story, help the team reach consensus with stakeholders, and serve as the basis for acceptance testing of the story",
+      "To replace the conversation about the user story, so that stakeholders no longer need to discuss the story with the team",
+      "To specify the internal design and the code structure that the developers must use when implementing the user story"
+    ],
+    "correct": [1],
+    "explanation": "Acceptance criteria are the conditions an implementation of a user story must meet to be accepted. They are used to define the scope of the story, reach consensus among stakeholders, describe both positive and negative scenarios, serve as a basis for acceptance testing of the story, and allow accurate planning and estimation. They complement, rather than replace, the conversation, which remains one of the 3 C's. They do not by themselves produce cost estimates, and they describe required externally visible behavior, not internal design or code structure."
+  },
+  {
+    "id": "ctfl-4-041",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "A team writes the following acceptance criterion for a user story: 'Given a registered user is logged in and has at least one item in the basket, when the user selects the checkout option, then the payment page is displayed.' Which format of acceptance criteria is being used?",
+    "options": [
+      "The scenario-oriented format, which expresses criteria as interactions using given, when and then components",
+      "The rule-oriented format, which expresses criteria as a bullet list of verifiable rules or an input-output mapping",
+      "The checklist-based format, which expresses criteria as high-level reminders drawn from tester experience",
+      "The exploratory format, which expresses criteria as a test charter and a time-boxed session"
+    ],
+    "correct": [0],
+    "explanation": "The example follows the scenario-oriented format of acceptance criteria, using the Given/When/Then structure familiar from behavior-driven development: a precondition (given), an action (when) and an expected outcome (then). The rule-oriented format instead uses a bullet point list that verifies rules or a table mapping inputs to outputs. Checklists and test charters relate to the experience-based techniques of checklist-based and exploratory testing, and are not standard formats for writing acceptance criteria."
+  },
+  {
+    "id": "ctfl-4-042",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "In acceptance test-driven development (ATDD), what typically happens during the specification workshop?",
+    "options": [
+      "The developers demonstrate the completed implementation of the user story so that stakeholders can decide whether to release it",
+      "The testers automate the regression test suite for previously delivered user stories before the new iteration starts",
+      "Stakeholders analyze, discuss and write the user story and its acceptance criteria, resolving problems such as incompleteness, ambiguities and other defects in the story",
+      "The product owner privately assigns story points to each user story and communicates the estimates to the team afterwards"
+    ],
+    "correct": [2],
+    "explanation": "In ATDD, test cases are derived from acceptance criteria as part of the process, and the first step is typically a specification workshop in which stakeholders (such as business representatives, developers and testers) analyze, discuss and write the user story and, if not yet defined, its acceptance criteria. Incompleteness, ambiguities and other defects in the story are resolved during this process. Demonstrating a completed implementation happens after development, not in the workshop that precedes it; automating regression tests and privately assigning estimates are not what the specification workshop is for, and estimation in agile teams is collaborative rather than private."
+  },
+  {
+    "id": "ctfl-4-043",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which of the following statements about test cases in acceptance test-driven development (ATDD) is correct?",
+    "options": [
+      "They are created only after the user story has been fully implemented, so that they can be checked against the actual behavior of the code",
+      "They are based on the acceptance criteria, are created before the user story is implemented, and can act as examples that guide the development of the story",
+      "They cover only the expected, positive behavior of the user story, because negative scenarios are outside the scope of acceptance testing",
+      "They are written in a low-level programming notation that only the developers on the team are expected to understand"
+    ],
+    "correct": [1],
+    "explanation": "In ATDD, acceptance test cases are derived from the acceptance criteria during test design, before implementation, and they serve as examples of how the software should work, supporting and guiding development. Creating them only after implementation contradicts the test-driven nature of ATDD. Typically the positive tests are created first, but they are then followed by negative tests and may address non-functional quality characteristics as well, so coverage is not limited to positive behavior. The tests are written in a way that all stakeholders can understand, using domain language, not in a notation only developers can read."
+  },
+  {
+    "id": "ctfl-4-044",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following statements about acceptance test-driven development (ATDD) are correct? Select TWO options.",
+    "options": [
+      "Acceptance test cases are created before the user story is implemented and can drive its development",
+      "Only professional testers are allowed to participate in creating the ATDD test cases",
+      "The test cases use domain language and are written so that all stakeholders, including business representatives, developers and testers, can understand them",
+      "ATDD test cases are derived from the structure of the source code in order to achieve full branch coverage",
+      "ATDD requires that test cases are created only after the user story has been implemented, so that actual results are available"
+    ],
+    "correct": [0, 2],
+    "explanation": "ATDD is a test-first, collaboration-based approach: acceptance test cases are derived from the acceptance criteria and created before the story is implemented, and they can drive and support development by serving as examples of the required behavior. The tests contain sentences in natural, domain language so that all stakeholders can understand them. Test creation is collaborative, involving business representatives, developers and testers, not testers alone. The tests are based on acceptance criteria (the test basis), not on code structure, so branch coverage is not their design goal, and creating tests only after implementation contradicts the test-first principle of ATDD."
+  }
+]

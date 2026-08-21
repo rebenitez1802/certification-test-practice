@@ -1,0 +1,341 @@
+[
+  {
+    "id": "ctfl-2-001",
+    "chapter": "2",
+    "kLevel": "K1",
+    "stem": "Which of the following statements correctly describes the impact of the SDLC on testing?",
+    "options": [
+      "In sequential development models, dynamic testing of the whole system can normally only start late in the project, once the software becomes available",
+      "In iterative development models, test levels are always executed strictly one after another without overlap",
+      "In sequential development models, testers are never involved before the coding phase begins",
+      "In iterative development models, regression testing becomes less important because each increment is small"
+    ],
+    "correct": [0],
+    "explanation": "In sequential models, working software that can be dynamically tested is typically only available in the later phases, so dynamic testing starts late. In iterative models test levels often overlap, testers can be involved early even in sequential models through reviews, and regression testing becomes more important as the system grows with each increment."
+  },
+  {
+    "id": "ctfl-2-002",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A test manager wants to apply good testing practices that hold for any software development lifecycle. Which TWO of the following are such practices? Select TWO options.",
+    "options": [
+      "For every software development activity there is a corresponding test activity",
+      "All test levels should share the same test objectives to keep the process consistent",
+      "Test analysis and design for a given test level begins during the corresponding development phase",
+      "Testers should wait until the code is complete before reviewing work products",
+      "Every test level must be performed by an independent external test team"
+    ],
+    "correct": [0, 2],
+    "explanation": "Good practices applicable to any SDLC include having a corresponding test activity for each development activity and starting test analysis and design during the corresponding development phase (shift-left). Different test levels have different and specific objectives, testers should participate in reviews of work products as early as drafts are available, and independence is desirable but external teams are not mandatory for every level."
+  },
+  {
+    "id": "ctfl-2-003",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A developer writes a failing unit test that expresses the expected behavior of a small piece of functionality, then writes just enough code to make the test pass, and finally refactors the code while keeping all tests passing. Which approach is the developer following?",
+    "options": [
+      "Behavior-driven development",
+      "Test-driven development",
+      "Acceptance test-driven development",
+      "Exploratory testing"
+    ],
+    "correct": [1],
+    "explanation": "Writing a failing test first, then code to pass it, then refactoring is the classic TDD cycle. BDD and ATDD are also test-first approaches, but BDD uses natural-language Given/When/Then scenarios and ATDD derives tests from acceptance criteria in collaboration with stakeholders, whereas TDD works at the level of developer-written unit tests."
+  },
+  {
+    "id": "ctfl-2-004",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "Before implementation of a user story starts, a business representative, a developer and a tester meet to discuss the story and write acceptance tests together. These tests then guide the development of the story. Which practice does this BEST describe?",
+    "options": [
+      "Test-driven development",
+      "Regression-averse testing",
+      "Operational acceptance testing",
+      "Acceptance test-driven development"
+    ],
+    "correct": [3],
+    "explanation": "ATDD derives tests from acceptance criteria in a collaborative session involving different stakeholder perspectives before implementation, and those tests then drive development. TDD is a developer practice focused on unit-level tests, and operational acceptance testing evaluates operational aspects of a system, not story development."
+  },
+  {
+    "id": "ctfl-2-005",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A team expresses the desired behavior of the application in test cases written in a natural-language format using the structure Given (initial context), When (event), Then (outcome), so that stakeholders can easily understand them. Which approach is the team using?",
+    "options": [
+      "White-box testing",
+      "Behavior-driven development",
+      "Component integration testing",
+      "Checklist-based testing"
+    ],
+    "correct": [1],
+    "explanation": "BDD expresses desired behavior in a human-readable Given/When/Then format (e.g., Gherkin) that is understandable to all stakeholders, and these scenarios are then commonly automated. White-box testing is based on internal structure, and the other options are a test level and a test technique, not development-driving approaches."
+  },
+  {
+    "id": "ctfl-2-006",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "An organization adopts DevOps with a CI/CD pipeline. Which TWO of the following are typical benefits of DevOps from a testing perspective? Select TWO options.",
+    "options": [
+      "Fast feedback on code quality and on whether changes adversely affect existing code",
+      "Manual non-functional testing is no longer needed because the pipeline covers all quality characteristics",
+      "The CI/CD pipeline and test automation infrastructure require no maintenance once established",
+      "Automation through the delivery pipeline eliminates the need for repetitive manual testing effort",
+      "Testers no longer need to define test cases because the pipeline generates them"
+    ],
+    "correct": [0, 3],
+    "explanation": "DevOps promotes fast feedback through CI/CD and shifts repetitive manual testing effort to automation. However, manual testing (especially from the user perspective and for some non-functional characteristics) is still needed, the delivery pipeline and its test infrastructure require effort to define and maintain, and pipelines execute rather than invent test cases."
+  },
+  {
+    "id": "ctfl-2-007",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A company moves to a DevOps way of working. Which of the following is a typical RISK or challenge of DevOps from the testing point of view?",
+    "options": [
+      "Developers lose all responsibility for quality because testing is fully automated",
+      "Code visibility decreases because the pipeline hides the source code from testers",
+      "The CI/CD delivery pipeline must be defined, established and maintained, which requires resources and effort",
+      "Regression testing can no longer be performed because releases are too frequent"
+    ],
+    "correct": [2],
+    "explanation": "Setting up and maintaining the delivery pipeline and test automation infrastructure carries cost, effort and risk, which is a recognized DevOps challenge. DevOps actually increases developer responsibility for quality and code visibility, and frequent releases rely on automated regression testing rather than preventing it."
+  },
+  {
+    "id": "ctfl-2-008",
+    "chapter": "2",
+    "kLevel": "K1",
+    "stem": "In a DevOps environment, what is the main purpose of the automated tests executed as part of continuous integration?",
+    "options": [
+      "To replace acceptance testing performed by business representatives",
+      "To provide developers with fast feedback that their changes have not broken the existing code",
+      "To prove that the software contains no defects before release",
+      "To measure the productivity of individual developers"
+    ],
+    "correct": [1],
+    "explanation": "Automated tests in CI give rapid feedback on whether newly integrated changes adversely affect existing functionality. Testing can show the presence of defects but not their absence, and CI tests complement rather than replace acceptance testing and are not a productivity measurement tool."
+  },
+  {
+    "id": "ctfl-2-009",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A project team decides that testers will review the requirements specification and start test analysis as soon as requirement drafts are available, and that developers will perform static analysis on code before it enters the CI pipeline. Which principle or approach is the team applying?",
+    "options": [
+      "Shift-left approach",
+      "Defect clustering",
+      "Risk-based test prioritization",
+      "Exhaustive testing"
+    ],
+    "correct": [0],
+    "explanation": "Performing quality and testing activities earlier in the SDLC, such as reviewing requirement drafts and running static analysis early, is the shift-left approach, which helps find defects earlier and more cheaply. Defect clustering is a testing principle about defect distribution, and the other options do not describe moving activities earlier."
+  },
+  {
+    "id": "ctfl-2-010",
+    "chapter": "2",
+    "kLevel": "K1",
+    "stem": "Which of the following is a typical benefit of holding retrospectives at the end of an iteration or release?",
+    "options": [
+      "They remove the need for confirmation testing in the next iteration",
+      "They guarantee that no defects will escape to production in the future",
+      "They allow the correct answers of test cases to be updated automatically",
+      "Lessons learned can be used to improve the test process and increase test effectiveness"
+    ],
+    "correct": [3],
+    "explanation": "Retrospectives examine what went well, what did not, and what to improve, and the resulting lessons learned support continuous improvement of testing, such as increased effectiveness, efficiency and team bonding. They provide process improvement, not guarantees about defects or a replacement for any test activity."
+  },
+  {
+    "id": "ctfl-2-011",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A developer tests a single class in isolation using a unit test framework and stubs to simulate the class's dependencies. Which test level is being performed?",
+    "options": [
+      "System testing",
+      "Component integration testing",
+      "Component testing",
+      "Acceptance testing"
+    ],
+    "correct": [2],
+    "explanation": "Component (unit) testing focuses on components tested in isolation, often by developers using test harnesses, stubs or mocks. Component integration testing would focus on the interactions between components, not on one class in isolation."
+  },
+  {
+    "id": "ctfl-2-012",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "Two modules of an application have each passed their own unit tests. When they are tested working together, data passed from one module to the other is truncated because the modules use inconsistent field lengths in their interface. At which test level would this defect MOST likely be found?",
+    "options": [
+      "Component testing",
+      "Component integration testing",
+      "Acceptance testing",
+      "Operational acceptance testing"
+    ],
+    "correct": [1],
+    "explanation": "Component integration testing focuses on the interfaces and interactions between components, so inconsistencies in data exchanged between modules are typical defects found at this level. Component testing looks at each unit in isolation, where this interface mismatch would not be visible."
+  },
+  {
+    "id": "ctfl-2-013",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A test team verifies the complete, integrated application end to end in an environment that closely resembles production, checking that its overall functional and non-functional behavior matches the specified requirements. Which test level is this?",
+    "options": [
+      "System testing",
+      "Component testing",
+      "Component integration testing",
+      "Unit testing"
+    ],
+    "correct": [0],
+    "explanation": "System testing focuses on the behavior and capabilities of the whole system, covering functional and non-functional characteristics, and typically uses an environment corresponding to the production environment. Component and component integration testing address individual units and their interactions, not the complete system."
+  },
+  {
+    "id": "ctfl-2-014",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "An insurance company's new claims system has passed system testing. The team now tests the interfaces between the claims system and an external payment provider and a government reporting service. Which test level is being performed?",
+    "options": [
+      "Component integration testing",
+      "Alpha testing",
+      "Confirmation testing",
+      "System integration testing"
+    ],
+    "correct": [3],
+    "explanation": "System integration testing focuses on the interfaces and interactions between the system under test and other systems or external services. Component integration testing deals with interactions between components inside one system, and confirmation and alpha testing are not levels concerned with cross-system interfaces."
+  },
+  {
+    "id": "ctfl-2-015",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "Before go-live, business users of an ordering system execute their typical daily business scenarios on the system to build confidence that they can use it to carry out their work and that it fits their needs. Which type of acceptance testing is this?",
+    "options": [
+      "Operational acceptance testing",
+      "User acceptance testing",
+      "Regulatory acceptance testing",
+      "Beta testing"
+    ],
+    "correct": [1],
+    "explanation": "User acceptance testing is typically performed by intended users to validate that the system fulfills their needs and to build confidence before deployment. Operational acceptance testing is done by administrators and focuses on operational aspects such as backup and recovery, while regulatory acceptance checks conformance to laws and regulations."
+  },
+  {
+    "id": "ctfl-2-016",
+    "chapter": "2",
+    "kLevel": "K1",
+    "stem": "Which of the following activities is MOST typical of operational acceptance testing?",
+    "options": [
+      "Verifying that business users can complete their everyday tasks with the system",
+      "Checking that the system complies with a specific government regulation",
+      "Testing backup and restore procedures, installation and disaster recovery by operations staff",
+      "Having potential customers try the software at their own locations before release"
+    ],
+    "correct": [2],
+    "explanation": "Operational acceptance testing is usually performed by operations or system administration staff and covers operational aspects such as backup/restore, installing, upgrading, uninstalling, and disaster recovery. The other options describe user acceptance testing, regulatory acceptance testing and beta testing respectively."
+  },
+  {
+    "id": "ctfl-2-017",
+    "chapter": "2",
+    "kLevel": "K1",
+    "stem": "What is the main difference between alpha testing and beta testing?",
+    "options": [
+      "Alpha testing is performed by developers only, while beta testing is performed by testers only",
+      "Alpha testing is performed at the developing organization's site, while beta testing is performed by potential or existing users at their own locations",
+      "Alpha testing checks non-functional characteristics, while beta testing checks only functional behavior",
+      "Alpha testing occurs after release to the market, while beta testing occurs before any development is finished"
+    ],
+    "correct": [1],
+    "explanation": "Both alpha and beta testing are performed by potential or existing customers or operators; the key difference is location, with alpha performed at the developing organization's site and beta at the users' own locations. Neither is restricted to a particular quality characteristic, and both occur before general release."
+  },
+  {
+    "id": "ctfl-2-018",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A tester evaluates whether a web shop correctly calculates discounts, adds items to the basket and processes payments according to the specification. Which test type is the tester performing?",
+    "options": [
+      "Non-functional testing",
+      "White-box testing",
+      "Confirmation testing",
+      "Functional testing"
+    ],
+    "correct": [3],
+    "explanation": "Functional testing evaluates what the system should do, i.e., the functions it performs, such as calculating discounts and processing payments. Non-functional testing evaluates how well the system behaves (e.g., performance, usability), and confirmation testing checks whether a specific defect has been fixed."
+  },
+  {
+    "id": "ctfl-2-019",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A team measures how quickly the application responds under a load of 1,000 concurrent users and how easily new users can learn to operate the user interface. Which statement about these tests is correct?",
+    "options": [
+      "Both are non-functional tests, evaluating quality characteristics such as performance efficiency and usability",
+      "Both are functional tests, because they involve executing the software's functions",
+      "The load test is functional and the learnability test is non-functional",
+      "Both are white-box tests, because they require knowledge of the system architecture"
+    ],
+    "correct": [0],
+    "explanation": "Non-functional testing evaluates how well the system behaves, and performance efficiency and usability are quality characteristics classified in ISO/IEC 25010. The tests exercise functions, but their objective is to measure quality characteristics rather than verify functional behavior, and they can be designed without knowledge of internal structure."
+  },
+  {
+    "id": "ctfl-2-020",
+    "chapter": "2",
+    "kLevel": "K1",
+    "stem": "Which of the following BEST distinguishes black-box testing from white-box testing?",
+    "options": [
+      "Black-box testing can only be applied at the acceptance test level, while white-box testing can only be applied at the component test level",
+      "Black-box testing is always manual, while white-box testing is always automated",
+      "Black-box testing derives tests from documentation external to the test object, while white-box testing derives tests from the test object's internal structure or implementation",
+      "Black-box testing measures code coverage, while white-box testing measures requirements coverage"
+    ],
+    "correct": [2],
+    "explanation": "Black-box testing is specification-based and uses documentation external to the test object, while white-box testing is structure-based and uses the implementation or internal structure. Both approaches can be applied at any test level and can be manual or automated; coverage of code structure is associated with white-box, not black-box, testing."
+  },
+  {
+    "id": "ctfl-2-021",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "A defect in the tax calculation of a payroll system was fixed by a developer. The tester re-runs the test that originally failed, plus some new tests targeting the changed code, to check that the defect has actually been resolved. Which test type is the tester performing?",
+    "options": [
+      "Regression testing",
+      "Confirmation testing",
+      "Maintenance testing",
+      "Smoke testing"
+    ],
+    "correct": [1],
+    "explanation": "Confirmation testing (re-testing) confirms that a specific defect has been fixed, typically by re-running the failed test cases and possibly adding tests around the changed code. Regression testing, by contrast, checks that the fix has not caused unintended side effects in unchanged parts of the software."
+  },
+  {
+    "id": "ctfl-2-022",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "After a change to the login module, the team re-runs a broad suite of existing tests covering other, unchanged parts of the application to make sure the change has not introduced unintended side effects elsewhere. Which statement about this activity is correct?",
+    "options": [
+      "It is confirmation testing, because tests are executed after a change",
+      "It is unnecessary if the change passed its confirmation tests",
+      "It is regression testing, and it is a strong candidate for automation because the tests are run repeatedly",
+      "It is maintenance testing, which can only occur after the system has been retired"
+    ],
+    "correct": [2],
+    "explanation": "Regression testing detects unintended side effects of changes on unchanged areas and, because regression suites run many times, they are prime candidates for automation starting early in the project. Confirmation testing only shows the specific defect was fixed, so it does not replace regression testing, and retirement is only one possible trigger of maintenance testing."
+  },
+  {
+    "id": "ctfl-2-023",
+    "chapter": "2",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following situations would typically trigger maintenance testing? Select TWO options.",
+    "options": [
+      "The operational system is migrated from an on-premise data center to a cloud platform",
+      "A brand-new system is being developed and has not yet been released",
+      "A hot fix is applied to correct a defect found in the live production system",
+      "A retrospective identifies an improvement to the team's estimation practices",
+      "A tester designs test cases from a requirements specification during initial development"
+    ],
+    "correct": [0, 2],
+    "explanation": "Maintenance testing is triggered by changes to an operational system, including modifications such as hot fixes and planned enhancements, and by migration to another environment or platform (retirement of a system is a further trigger). Initial development activities and process improvements from retrospectives are not maintenance testing triggers."
+  },
+  {
+    "id": "ctfl-2-024",
+    "chapter": "2",
+    "kLevel": "K1",
+    "stem": "In maintenance testing, what is the main purpose of impact analysis?",
+    "options": [
+      "To determine the root cause of a defect found in production",
+      "To evaluate the consequences of a change in order to decide how much regression testing is needed",
+      "To measure the performance impact of the system on the production hardware",
+      "To calculate the financial cost of implementing the change request"
+    ],
+    "correct": [1],
+    "explanation": "Impact analysis evaluates the intended and possible unintended consequences of a change, including which areas of the system may be affected, which helps decide the extent of regression testing to perform. It is not root cause analysis, performance measurement or cost estimation."
+  }
+]

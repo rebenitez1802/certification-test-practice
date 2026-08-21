@@ -1,0 +1,510 @@
+[
+  {
+    "id": "ctfl-5-001",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Which of the following is a benefit provided by a test plan?",
+    "options": [
+      "It guarantees that the software will be free of defects at release",
+      "It records the final results of test execution and the lessons learned",
+      "It serves as a means of communication with team members and other stakeholders",
+      "It removes the need for the project to have a test strategy"
+    ],
+    "correct": [2],
+    "explanation": "A test plan documents the means and schedule for achieving test objectives and serves as a means of communication with team members and stakeholders. It cannot guarantee defect-free software, final results and lessons learned belong in a test completion report, and it complements rather than replaces the test strategy."
+  },
+  {
+    "id": "ctfl-5-002",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following are typical contents of a test plan? Select TWO options.",
+    "options": [
+      "A summary of the test activities performed and their final results",
+      "The budget and schedule for the test activities",
+      "Lessons learned from the completed testing",
+      "The scope of testing, including test objectives and constraints",
+      "The number of defects remaining open at the time of release"
+    ],
+    "correct": [1, 3],
+    "explanation": "A test plan typically contains the context of testing (scope, objectives, constraints), the test approach, and the budget and schedule. Summaries of performed activities, lessons learned, and open defects at release are contents of a test completion report, which is produced after testing, not planned before it."
+  },
+  {
+    "id": "ctfl-5-003",
+    "chapter": "5",
+    "kLevel": "K1",
+    "stem": "In an Agile project, how does a tester typically add value during release planning?",
+    "options": [
+      "By participating in writing testable user stories and their acceptance criteria",
+      "By defining the organization-wide test policy",
+      "By fixing the defects found in the code of previous releases",
+      "By approving the overall project budget"
+    ],
+    "correct": [0],
+    "explanation": "During release planning, testers add value by helping to write testable user stories and acceptance criteria, participating in risk analyses, and estimating test effort. Defining the test policy, fixing code defects, and approving budgets are not tester contributions to release planning."
+  },
+  {
+    "id": "ctfl-5-004",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Priya is a tester in a Scrum team that is holding its iteration planning meeting. Which of the following activities would Priya typically perform during iteration planning?",
+    "options": [
+      "Approving the overall product roadmap for the next year",
+      "Defining the organization-wide test policy",
+      "Assigning coding tasks to the developers in the team",
+      "Performing a detailed risk analysis of the user stories selected for the iteration"
+    ],
+    "correct": [3],
+    "explanation": "During iteration planning, testers perform detailed risk analysis of user stories, determine their testability, break them down into tasks (including testing tasks), and estimate test effort. Roadmap approval, test policy definition, and assigning coding work are not tester activities in iteration planning."
+  },
+  {
+    "id": "ctfl-5-005",
+    "chapter": "5",
+    "kLevel": "K1",
+    "stem": "In Agile software development, entry criteria are commonly referred to by which term?",
+    "options": [
+      "Definition of Done",
+      "Definition of Ready",
+      "Acceptance criteria",
+      "Exit gates"
+    ],
+    "correct": [1],
+    "explanation": "In Agile software development, entry criteria correspond to the Definition of Ready, which defines the preconditions for starting an activity. The Definition of Done corresponds to exit criteria, and acceptance criteria define the conditions for accepting a user story."
+  },
+  {
+    "id": "ctfl-5-006",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Zanele's test team has consumed the entire testing budget before reaching the agreed coverage criteria. The stakeholders review the test results and decide to release the product anyway. Which statement best describes this situation?",
+    "options": [
+      "Consumption of the budget can be viewed as valid exit criteria, provided stakeholders have reviewed and accepted the risk of going live without further testing",
+      "Testing must always continue until every originally defined exit criterion has been fully met",
+      "The team has violated the test plan, so the release decision is invalid",
+      "Budget consumption is an entry criterion, so testing should be restarted from the beginning"
+    ],
+    "correct": [0],
+    "explanation": "Even when the original exit criteria are not met, exhaustion of the allocated budget or time can be considered valid exit criteria if stakeholders have reviewed and accepted the risk to go live without further testing. Exit criteria are not absolute barriers to release, and budget consumption is not an entry criterion."
+  },
+  {
+    "id": "ctfl-5-007",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Which of the following is a typical exit criterion for a test activity?",
+    "options": [
+      "The test environment is available and ready for use",
+      "The initial quality level of the test object has been confirmed by a passed smoke test",
+      "The planned level of requirements coverage has been achieved",
+      "The requirements specification has been approved and baselined"
+    ],
+    "correct": [2],
+    "explanation": "Exit criteria measure the thoroughness and completion of testing, such as achieving a planned level of coverage or reducing unresolved defects below a threshold. Environment availability, a passed smoke test, and approved requirements are typical entry criteria, i.e., preconditions for starting testing."
+  },
+  {
+    "id": "ctfl-5-008",
+    "chapter": "5",
+    "kLevel": "K1",
+    "stem": "Estimation based on ratios primarily relies on which source of data?",
+    "options": [
+      "Measurements collected in early iterations of the current project",
+      "Historical figures collected from previous similar projects within the same organization",
+      "The consensus of a panel of experts reached through iterative anonymous estimates",
+      "A most optimistic, most likely, and most pessimistic estimate combined in a formula"
+    ],
+    "correct": [1],
+    "explanation": "Estimation based on ratios is a metrics-based technique that uses figures collected from previous projects within the organization, such as a standard developer-to-tester effort ratio. Measurements from the current project are used in extrapolation, expert consensus describes Wideband Delphi, and the three estimates describe three-point estimation."
+  },
+  {
+    "id": "ctfl-5-009",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Which of the following best describes an objective of a defect report written during dynamic testing?",
+    "options": [
+      "To assign personal blame to the developer who introduced the defect",
+      "To prove to management that the testers are working hard",
+      "To guarantee that the defect will be fixed before the next release",
+      "To provide those responsible for resolving the issue with sufficient information to reproduce and resolve it"
+    ],
+    "correct": [3],
+    "explanation": "Defect reports aim to give developers and other stakeholders sufficient information to identify, isolate, and resolve reported issues, to track the quality of the work product, and to provide ideas for process improvement. They are not intended to assign blame, and a report cannot guarantee that a fix will happen by a given release."
+  },
+  {
+    "id": "ctfl-5-010",
+    "chapter": "5",
+    "kLevel": "K1",
+    "stem": "Planning Poker, commonly used in Agile software development, is a variant of which estimation technique?",
+    "options": [
+      "Wideband Delphi",
+      "Three-point estimation",
+      "Estimation based on ratios",
+      "Extrapolation"
+    ],
+    "correct": [0],
+    "explanation": "Planning Poker is a variant of the Wideband Delphi technique, in which team members estimate using cards and iterate until consensus is reached. Three-point estimation, ratios, and extrapolation are different estimation techniques that do not use consensus-building rounds with cards."
+  },
+  {
+    "id": "ctfl-5-011",
+    "chapter": "5",
+    "kLevel": "K3",
+    "stem": "Ravi uses three-point estimation for a test analysis task. The most optimistic estimate is 6 person-days, the most likely estimate is 9 person-days, and the most pessimistic estimate is 24 person-days. Using the formula E = (a + 4m + b) / 6, what is the final estimate?",
+    "options": [
+      "11 person-days",
+      "13 person-days",
+      "9 person-days",
+      "15 person-days"
+    ],
+    "correct": [0],
+    "explanation": "E = (6 + 4 x 9 + 24) / 6 = (6 + 36 + 24) / 6 = 66 / 6 = 11 person-days. The distractor 13 comes from taking the simple average (6 + 9 + 24) / 3, and 9 is just the most likely value without applying the formula."
+  },
+  {
+    "id": "ctfl-5-012",
+    "chapter": "5",
+    "kLevel": "K3",
+    "stem": "Hana estimates a test implementation task with three-point estimation: most optimistic a = 4 person-days, most likely m = 7 person-days, most pessimistic b = 16 person-days. Using E = (a + 4m + b) / 6 and standard deviation SD = (b - a) / 6, which result should she report?",
+    "options": [
+      "9 person-days, plus or minus 2 person-days",
+      "8 person-days, plus or minus 3 person-days",
+      "8 person-days, plus or minus 2 person-days",
+      "7 person-days, plus or minus 2 person-days"
+    ],
+    "correct": [2],
+    "explanation": "E = (4 + 4 x 7 + 16) / 6 = (4 + 28 + 16) / 6 = 48 / 6 = 8 person-days, and SD = (16 - 4) / 6 = 2 person-days, so the estimate is 8 plus or minus 2 person-days. The other options use either a wrong expected value or a wrong standard deviation."
+  },
+  {
+    "id": "ctfl-5-013",
+    "chapter": "5",
+    "kLevel": "K3",
+    "stem": "In Chiara's organization, historical data from similar past projects shows that development effort and test effort follow a ratio of 3:2. The development effort for a new project is estimated at 600 person-days. Using estimation based on ratios, what is the estimated test effort?",
+    "options": [
+      "300 person-days",
+      "900 person-days",
+      "400 person-days",
+      "200 person-days"
+    ],
+    "correct": [2],
+    "explanation": "With a development-to-test ratio of 3:2, the test effort is 600 x 2 / 3 = 400 person-days. The distractor 900 inverts the ratio (600 x 3 / 2), while 300 and 200 apply incorrect fractions such as one half or one third."
+  },
+  {
+    "id": "ctfl-5-014",
+    "chapter": "5",
+    "kLevel": "K3",
+    "stem": "Sofia's team measured its own performance in the current project: during the first two iterations, testing 24 user stories took a total of 96 hours of test effort. The next iteration contains 14 user stories of similar size. Using extrapolation, what is the estimated test effort for the next iteration?",
+    "options": [
+      "48 hours",
+      "52 hours",
+      "56 hours",
+      "64 hours"
+    ],
+    "correct": [2],
+    "explanation": "The measured effort is 96 / 24 = 4 hours per user story, so 14 stories are estimated at 14 x 4 = 56 hours. Extrapolation uses measurements from earlier iterations of the same project to estimate future work; the other values result from incorrect per-story rates."
+  },
+  {
+    "id": "ctfl-5-015",
+    "chapter": "5",
+    "kLevel": "K1",
+    "stem": "When risk-based prioritization is used, in which order are test cases executed?",
+    "options": [
+      "In the order in which they were designed",
+      "Test cases covering the highest risks are executed first",
+      "Test cases achieving the highest coverage are executed first",
+      "In the order requested by the development team"
+    ],
+    "correct": [1],
+    "explanation": "In risk-based prioritization, the execution order is based on the results of risk analysis, so test cases covering the most important risks run first. Coverage-first ordering describes coverage-based prioritization, and design or developer-requested order is not a prioritization strategy."
+  },
+  {
+    "id": "ctfl-5-016",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Diego orders his test suite so that the test case achieving the highest statement coverage runs first. Each subsequent test case is then selected based on the additional coverage it contributes beyond the tests already scheduled. Which prioritization approach is Diego using?",
+    "options": [
+      "Risk-based prioritization",
+      "Requirements-based prioritization",
+      "Reactive prioritization based on defect clusters",
+      "Coverage-based prioritization using additional coverage"
+    ],
+    "correct": [3],
+    "explanation": "Ordering tests by the extra coverage each one adds is the additional coverage variant of coverage-based prioritization. Risk-based prioritization uses risk levels and requirements-based prioritization uses the stakeholder priority of the traced requirements, neither of which is described here."
+  },
+  {
+    "id": "ctfl-5-017",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Aisha traces each test case back to a requirement. The stakeholders have assigned a priority to every requirement, and Aisha executes the test cases associated with the most important requirements first. Which prioritization strategy is she applying?",
+    "options": [
+      "Requirements-based prioritization",
+      "Coverage-based prioritization",
+      "Risk-based prioritization",
+      "Dependency-based scheduling"
+    ],
+    "correct": [0],
+    "explanation": "In requirements-based prioritization, test cases are ordered according to the priorities of the requirements they are traced to, as defined by stakeholders. Coverage-based prioritization uses achieved coverage and risk-based prioritization uses risk analysis results, not requirement priorities."
+  },
+  {
+    "id": "ctfl-5-018",
+    "chapter": "5",
+    "kLevel": "K3",
+    "stem": "Minh must schedule four test cases. Priority 1 is the highest priority. TC1 has priority 2, TC2 has priority 1, TC3 has priority 3, and TC4 has priority 2. TC2 can only be executed after TC4 has been executed. Which execution order best respects both the priorities and the dependency?",
+    "options": [
+      "TC2, TC4, TC1, TC3",
+      "TC1, TC2, TC4, TC3",
+      "TC4, TC2, TC1, TC3",
+      "TC2, TC1, TC4, TC3"
+    ],
+    "correct": [2],
+    "explanation": "TC2 has the highest priority but depends on TC4, so TC4 must run first, immediately followed by TC2, then TC1 (priority 2) and finally TC3 (priority 3). Options starting with TC2 violate the dependency, and starting with TC1 delays the highest-priority test unnecessarily."
+  },
+  {
+    "id": "ctfl-5-019",
+    "chapter": "5",
+    "kLevel": "K1",
+    "stem": "Which of the following statements about the test pyramid is correct?",
+    "options": [
+      "The top layer of the pyramid contains many small, fast, isolated tests",
+      "The test pyramid shows that all tests should have the same granularity",
+      "The bottom layer of the pyramid tests large pieces of end-to-end functionality",
+      "Tests in the bottom layer are small, isolated, and fast to execute"
+    ],
+    "correct": [3],
+    "explanation": "In the test pyramid, the bottom layer contains small, isolated, fast tests that each check a small piece of functionality, which is why many of them are needed. Higher layers contain fewer, slower tests of larger scope, and the model explicitly shows that tests have different granularity."
+  },
+  {
+    "id": "ctfl-5-020",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "A team following the test pyramid has hundreds of unit tests, several dozen API-level integration tests, and only a handful of end-to-end UI tests. What is the main reasoning behind this distribution?",
+    "options": [
+      "Lower-layer tests are fast and isolated, so many of them can be run frequently at low cost, while higher-layer tests are slower and more expensive, so fewer are kept",
+      "UI tests are more reliable than unit tests, so fewer of them are needed to achieve confidence",
+      "Unit tests find all the defects that end-to-end tests would find, making UI tests optional",
+      "Regulations require that at least eighty percent of all tests be unit tests"
+    ],
+    "correct": [0],
+    "explanation": "The pyramid promotes many fast, isolated, cheap tests at the lower layers and only a few slow, high-maintenance tests of large scope at the top. UI tests are not more reliable than unit tests, unit tests cannot find all end-to-end defects, and no regulation mandates the distribution."
+  },
+  {
+    "id": "ctfl-5-021",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "The testing quadrants model groups test types along which two dimensions?",
+    "options": [
+      "Test level and degree of test automation",
+      "Whether tests are business facing or technology facing, and whether they support the team or critique the product",
+      "Risk likelihood and risk impact",
+      "Functional versus structural testing, and manual versus scripted testing"
+    ],
+    "correct": [1],
+    "explanation": "The testing quadrants classify test types by two dimensions: business facing versus technology facing, and supporting the team (guiding development) versus critiquing the product. This grouping helps describe and communicate the different test types to all stakeholders. The other option pairs are not the quadrant dimensions."
+  },
+  {
+    "id": "ctfl-5-022",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Nadia's team performs exploratory testing, usability testing, and user acceptance testing of a new mobile app. In the testing quadrants model, where do these test types belong?",
+    "options": [
+      "Quadrant Q1, which is technology facing and supports the team",
+      "Quadrant Q2, which is business facing and supports the team",
+      "Quadrant Q3, which is business facing and critiques the product",
+      "Quadrant Q4, which is technology facing and critiques the product"
+    ],
+    "correct": [2],
+    "explanation": "Quadrant Q3 is business facing and critiques the product; it covers user-oriented testing such as exploratory testing, usability testing, and user acceptance testing. Q1 covers component and integration tests, Q2 covers functional tests that support the team, and Q4 covers non-functional tests like performance and security."
+  },
+  {
+    "id": "ctfl-5-023",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Yusuf uses specialized tools to run performance tests and security tests against a payment platform. In the testing quadrants model, to which quadrant do these test types belong?",
+    "options": [
+      "Quadrant Q2, which is business facing and supports the team",
+      "Quadrant Q4, which is technology facing and critiques the product",
+      "Quadrant Q1, which is technology facing and supports the team",
+      "Quadrant Q3, which is business facing and critiques the product"
+    ],
+    "correct": [1],
+    "explanation": "Quadrant Q4 is technology facing and critiques the product; it includes non-functional testing such as performance and security testing, which is often supported by tools. Q1 contains component-level tests supporting the team, while Q2 and Q3 are business facing."
+  },
+  {
+    "id": "ctfl-5-024",
+    "chapter": "5",
+    "kLevel": "K1",
+    "stem": "In risk management, how is the level of a risk determined?",
+    "options": [
+      "By the likelihood of the risk occurring and the impact of the consequences if it occurs",
+      "By the severity of the defect and the priority assigned by the developer",
+      "By the cost of testing and the length of the project schedule",
+      "By the number of defects found and the test effort spent"
+    ],
+    "correct": [0],
+    "explanation": "Risk level is determined by the likelihood of occurrence and the impact (the harm resulting from occurrence). Severity and priority relate to defect classification, and cost, schedule, defect counts, and effort do not define risk level."
+  },
+  {
+    "id": "ctfl-5-025",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Emeka is compiling the risk register for a banking project. Which of the following is a PROJECT risk rather than a product risk?",
+    "options": [
+      "The application crashes when a customer uploads a file larger than 2 GB",
+      "The interest calculation module rounds amounts incorrectly",
+      "Personal customer data may be exposed to unauthorized users",
+      "The only performance test specialist will leave the company before the load tests are scheduled to start"
+    ],
+    "correct": [3],
+    "explanation": "The departure of a key specialist is a people-related project risk because it affects the project's ability to achieve its objectives. Crashes, incorrect calculations, and exposure of personal data are product risks, since they relate to the quality characteristics of the product itself."
+  },
+  {
+    "id": "ctfl-5-026",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following are product risks? Select TWO options.",
+    "options": [
+      "The vendor of the third-party test tool used by the team goes bankrupt",
+      "The calculation module of the loan application returns incorrect interest amounts",
+      "Delivery of the test environment is delayed by two weeks",
+      "The application's response time exceeds the specified limit under normal load",
+      "The testers lack experience with the chosen test automation framework"
+    ],
+    "correct": [1, 3],
+    "explanation": "Incorrect calculations and inadequate response times relate to the quality characteristics of the product, so they are product risks. A supplier going bankrupt, delayed environment delivery, and lack of tester skills are project risks because they threaten the project's schedule, budget, or capability rather than product quality."
+  },
+  {
+    "id": "ctfl-5-027",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Product risk analysis consists of which main activities?",
+    "options": [
+      "Risk mitigation and risk monitoring",
+      "Risk identification and risk assessment",
+      "Risk acceptance and risk transfer",
+      "Defect logging and root cause analysis"
+    ],
+    "correct": [1],
+    "explanation": "Product risk analysis consists of risk identification (generating a list of risks) and risk assessment (categorizing risks, determining their likelihood, impact and level, prioritizing them, and proposing ways to handle them). Mitigation and monitoring belong to risk control, which follows the analysis."
+  },
+  {
+    "id": "ctfl-5-028",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "How can the results of a product risk analysis influence the testing of a system?",
+    "options": [
+      "They determine which software development lifecycle model the project must adopt",
+      "They fix in advance the exact number of defects that testing will find",
+      "They help determine the scope and thoroughness of testing and the selection of appropriate test levels, test types, and test techniques",
+      "They eliminate the need to perform any regression testing"
+    ],
+    "correct": [2],
+    "explanation": "Product risk analysis results are used to decide the thoroughness and scope of testing, select suitable test levels, types, and techniques, prioritize testing to find critical defects early, and determine whether additional activities such as reviews are needed. They cannot predict defect counts, dictate the lifecycle model, or remove the need for regression testing."
+  },
+  {
+    "id": "ctfl-5-029",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "A product risk analysis has identified a high risk of failures in a hospital medication-dosage component. Which of the following is an appropriate risk mitigation measure that can be taken by testing?",
+    "options": [
+      "Selecting testers with the most appropriate experience for the component and performing reviews and static analysis in addition to dynamic testing",
+      "Recording the risk in the risk register and taking no further action until a failure occurs in production",
+      "Purchasing insurance to cover potential financial losses caused by dosage failures",
+      "Outsourcing the development of the component so the risk belongs to the supplier"
+    ],
+    "correct": [0],
+    "explanation": "Testing mitigates product risks through measures such as choosing testers with suitable experience, applying an appropriate level of independence, performing reviews and static analysis, and applying suitable test techniques, coverage, levels, and types. Taking no action is risk acceptance, while insurance and outsourcing are risk transfer measures, not testing-based mitigation."
+  },
+  {
+    "id": "ctfl-5-030",
+    "chapter": "5",
+    "kLevel": "K3",
+    "stem": "Elena assesses four product risks using scales of 1 to 5, where risk level = likelihood x impact. Risk A has likelihood 4 and impact 3. Risk B has likelihood 2 and impact 5. Risk C has likelihood 5 and impact 2. Risk D has likelihood 3 and impact 3. Based on risk level, which risk should be addressed first?",
+    "options": [
+      "Risk B",
+      "Risk A",
+      "Risk C",
+      "Risk D"
+    ],
+    "correct": [1],
+    "explanation": "Risk A = 4 x 3 = 12, Risk B = 2 x 5 = 10, Risk C = 5 x 2 = 10, Risk D = 3 x 3 = 9. Risk A has the highest risk level, so it should be addressed first; B and C are tied at 10 despite having a higher single factor."
+  },
+  {
+    "id": "ctfl-5-031",
+    "chapter": "5",
+    "kLevel": "K1",
+    "stem": "Which of the following is a commonly used defect metric in test monitoring?",
+    "options": [
+      "The number of pages in the test plan document",
+      "Defect detection percentage (DDP)",
+      "The number of daily stand-up meetings held by the team",
+      "The ratio of testers to business analysts on the project"
+    ],
+    "correct": [1],
+    "explanation": "Defect detection percentage (DDP) is a common defect metric, along with measures such as the number and priority of defects found and fixed and defect density. Document length, meeting counts, and staffing ratios are not defect metrics used in test monitoring."
+  },
+  {
+    "id": "ctfl-5-032",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Bao is writing the weekly test progress report for an ongoing test project. Which TWO of the following are typical contents of a test progress report? Select TWO options.",
+    "options": [
+      "Impediments to testing and their workarounds",
+      "Lessons learned that are relevant for future projects",
+      "Testing planned for the next reporting period",
+      "The final evaluation of whether all test objectives were achieved",
+      "The complete set of reusable testware handed over at project end"
+    ],
+    "correct": [0, 2],
+    "explanation": "A test progress report typically contains the test period, progress against the plan, impediments and their workarounds, relevant metrics, new and changed risks, and the testing planned for the next period. Lessons learned, the final evaluation of test objectives, and handover of reusable testware belong in the test completion report."
+  },
+  {
+    "id": "ctfl-5-033",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Which content is typically found in a test completion report but NOT in a test progress report?",
+    "options": [
+      "Impediments to testing and their workarounds",
+      "New and changed risks identified within the reporting period",
+      "Testing planned for the next reporting period",
+      "Unmitigated residual risks and lessons learned that are relevant for future projects"
+    ],
+    "correct": [3],
+    "explanation": "A test completion report summarizes a completed stage of testing and includes items such as deviations from the plan, unmitigated residual risks, defects not fixed, and lessons learned. Impediments, newly identified risks, and next-period planning are ongoing concerns reported in test progress reports."
+  },
+  {
+    "id": "ctfl-5-034",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Katarzyna, a test manager, needs to communicate the current testing status to several different stakeholder groups. Which statement about communicating test status is correct?",
+    "options": [
+      "Test status must always be communicated only through formally approved written reports",
+      "Test status should only be shared with other testers to avoid alarming the business",
+      "The best means of communication depends on the audience's needs and may include verbal updates, dashboards, and written reports",
+      "In Agile teams, test status must never be discussed verbally"
+    ],
+    "correct": [2],
+    "explanation": "The best means of communicating test status varies with stakeholder concerns, organizational strategies, and regulatory constraints, and may range from verbal communication and task boards or dashboards to formal written reports. Restricting communication to one format or one audience contradicts this tailoring."
+  },
+  {
+    "id": "ctfl-5-035",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "How does configuration management support testing?",
+    "options": [
+      "It automatically corrects defects found in baselined work products",
+      "It ensures that all configuration items, including test items and testware, are uniquely identified, version controlled, tracked for changes, and related to each other so traceability can be maintained",
+      "It removes the need for a separate defect management process",
+      "It guarantees that the test environment will never change during the project"
+    ],
+    "correct": [1],
+    "explanation": "Configuration management keeps configuration items uniquely identified, version controlled, tracked for changes, and related to other items, so that testers know exactly which versions of test items and testware they are working with and traceability is maintained. It does not fix defects, replace defect management, or freeze environments."
+  },
+  {
+    "id": "ctfl-5-036",
+    "chapter": "5",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following are typical contents of a defect report created during dynamic testing? Select TWO options.",
+    "options": [
+      "The complete source code of the module in which the failure was observed",
+      "The expected results and the actual results",
+      "The names of all testers working on the project",
+      "A guaranteed date by which the defect will be fixed",
+      "The date the defect was found and identification of the test item and test environment"
+    ],
+    "correct": [1, 4],
+    "explanation": "A typical defect report includes a unique identifier, title, date, identification of the test item and environment, a description of the failure enabling reproduction, and the expected versus actual results. Source code, a full team roster, and guaranteed fix dates are not defect report contents."
+  }
+]

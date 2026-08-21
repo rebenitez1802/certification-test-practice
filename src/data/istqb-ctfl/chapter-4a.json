@@ -1,0 +1,313 @@
+[
+  {
+    "id": "ctfl-4-001",
+    "chapter": "4",
+    "kLevel": "K1",
+    "stem": "Which of the following is a black-box test technique?",
+    "options": [
+      "Statement testing",
+      "Error guessing",
+      "Equivalence partitioning",
+      "Branch testing"
+    ],
+    "correct": [2],
+    "explanation": "Equivalence partitioning is a black-box technique: test cases are derived from the specified behavior of the test object without reference to its internal structure. Statement testing and branch testing are white-box techniques based on code structure, and error guessing is an experience-based technique based on the tester's knowledge of likely defects."
+  },
+  {
+    "id": "ctfl-4-002",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following factors should typically be considered when selecting which test techniques to use? Select TWO options.",
+    "options": [
+      "The seniority ranking of the developers who wrote the code",
+      "Regulatory standards that apply to the project",
+      "The popularity of each technique in online discussion forums",
+      "The expected types of defects in the test object",
+      "The physical distance between the test lab and the development office"
+    ],
+    "correct": [1, 3],
+    "explanation": "The syllabus lists factors such as the component or system complexity, regulatory standards, customer or contractual requirements, risk levels and types, available documentation, tester knowledge and skills, available tools, time and budget, the SDLC model, and the expected types of defects. Regulatory standards and expected defect types are therefore valid selection factors. Developer seniority, technique popularity in forums, and office locations are not factors named by the syllabus for choosing techniques."
+  },
+  {
+    "id": "ctfl-4-003",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which statement correctly describes black-box test techniques?",
+    "options": [
+      "Test cases are derived from the specified behavior of the test object, without reference to its internal structure",
+      "Test cases are derived from an analysis of the code structure, and coverage is measured against executed code elements",
+      "Test cases are derived mainly from the tester's intuition about where defects are likely to occur",
+      "Test cases can only be created after the source code has been delivered to the test team"
+    ],
+    "correct": [0],
+    "explanation": "Black-box (specification-based) techniques derive test cases from documented specified behavior, so knowledge of the internal structure is not needed and coverage is measured against specification elements. Deriving tests from code structure describes white-box techniques, and relying on tester intuition describes experience-based techniques. Because black-box tests are independent of the implementation, they can be designed before the code exists."
+  },
+  {
+    "id": "ctfl-4-004",
+    "chapter": "4",
+    "kLevel": "K1",
+    "stem": "In equivalence partitioning, what is assumed about the elements of a single equivalence partition?",
+    "options": [
+      "Each element must be tested individually to achieve minimum coverage",
+      "All elements of the partition are expected to be processed by the test object in the same way",
+      "The elements must all be invalid values of the input domain",
+      "The elements must lie exactly on the boundaries of the partition"
+    ],
+    "correct": [1],
+    "explanation": "Equivalence partitioning divides data into partitions whose elements are expected to be processed in the same way by the test object, so testing one element is assumed to represent the whole partition. It is therefore not necessary to test every element individually. Partitions may be valid or invalid, and boundary values are the focus of boundary value analysis, not the defining property of a partition."
+  },
+  {
+    "id": "ctfl-4-005",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "An input field accepts integer values from 1 to 100 inclusive; any other integer is rejected. Using equivalence partitioning on this single input, what is the minimum number of test cases needed to cover every partition at least once?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "3"
+    ],
+    "correct": [3],
+    "explanation": "The partitions are: invalid integers below the range (values less than 1), valid integers 1 to 100, and invalid integers above the range (values greater than 100). That gives 3 partitions in total, and with a single input each test case covers exactly one partition, so a minimum of 3 test cases is needed, for example 0, 50 and 101. The answer 2 ignores one invalid partition, while 4 and 6 count boundary values, which belong to boundary value analysis, not equivalence partitioning."
+  },
+  {
+    "id": "ctfl-4-006",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A checkout form has three independent inputs: payment method with 3 equivalence partitions, shipping country with 4 equivalence partitions, and item category with 2 equivalence partitions. Using the each-choice coverage criterion, what is the minimum number of test cases required?",
+    "options": [
+      "9",
+      "4",
+      "24",
+      "3"
+    ],
+    "correct": [1],
+    "explanation": "Each-choice coverage requires every partition of every parameter to be covered by at least one test case, and one test case can cover one partition of each parameter simultaneously. The minimum is therefore the largest number of partitions of any single parameter: max(3, 4, 2) = 4. The answer 9 is the sum of the partition counts, 24 is the product (which would be full combinatorial coverage, not each-choice), and 3 covers only the largest set of one of the smaller parameters."
+  },
+  {
+    "id": "ctfl-4-007",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "When applying equivalence partitioning, why should invalid partitions normally be covered by individual test cases rather than combined in one test case?",
+    "options": [
+      "Because invalid values always cause the software to crash when combined",
+      "Because the number of test cases must always equal the number of parameters",
+      "Because one failure caused by an invalid value may mask the handling of another invalid value in the same test case",
+      "Because invalid partitions do not need to be tested at all if valid partitions pass"
+    ],
+    "correct": [2],
+    "explanation": "If several invalid values are combined in a single test case, the test object may react to only one of them (for example, reporting the first error it detects), so defects in the handling of the other invalid values can be masked and go undetected. Testing invalid partitions one at a time avoids this failure masking. Invalid values do not always cause crashes, there is no rule tying the test case count to the parameter count, and invalid partitions do need to be tested."
+  },
+  {
+    "id": "ctfl-4-008",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A ticketing system accepts an age as a whole number and classifies customers as: child (age 0 to 17), adult (age 18 to 64), senior (age 65 to 120). Ages below 0 or above 120 are rejected as errors. Using equivalence partitioning, what is the minimum number of test cases needed to cover all partitions?",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "6"
+    ],
+    "correct": [0],
+    "explanation": "There are three valid partitions (0-17, 18-64, 65-120) and two invalid partitions (below 0, above 120), giving 5 partitions in total. With a single input parameter, each test case covers exactly one partition, so at least 5 test cases are needed, for example -1, 10, 30, 70 and 121. The answer 3 counts only the valid partitions, 4 misses one invalid partition, and 6 over-counts the partitions."
+  },
+  {
+    "id": "ctfl-4-009",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "For a given input, a tester identifies 8 equivalence partitions. The executed test cases exercise values from 6 of these partitions. What is the achieved equivalence partitioning coverage?",
+    "options": [
+      "62.5%",
+      "66.7%",
+      "75%",
+      "80%"
+    ],
+    "correct": [2],
+    "explanation": "Equivalence partitioning coverage is the number of partitions exercised by at least one test case divided by the total number of identified partitions, expressed as a percentage: 6 / 8 = 0.75, which is 75%. The value 62.5% would be 5 of 8 partitions, 66.7% would be 6 of 9 partitions, and 80% would be 6 of 7.5 or 8 of 10 partitions, none of which matches the scenario."
+  },
+  {
+    "id": "ctfl-4-010",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A quantity field accepts integers from 10 to 50 inclusive. Which set of values results from applying 2-value boundary value analysis to the valid partition?",
+    "options": [
+      "10, 11, 49, 50",
+      "9, 10, 50, 51",
+      "9, 10, 11, 49, 50, 51",
+      "10, 30, 50"
+    ],
+    "correct": [1],
+    "explanation": "In 2-value BVA, each boundary value and its closest neighbor in the adjacent partition are tested. The boundaries of the valid partition are 10 and 50; their closest neighbors outside the partition are 9 and 51. The resulting set is 9, 10, 50, 51. The set 10, 11, 49, 50 wrongly takes the neighbors inside the partition instead of outside it, the six-value set 9, 10, 11, 49, 50, 51 corresponds to 3-value BVA, and 10, 30, 50 is boundaries plus a mid-range value, which is not a BVA set."
+  },
+  {
+    "id": "ctfl-4-011",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A PIN entry accepts integer values from 1 to 999 inclusive. Using 3-value boundary value analysis on the valid partition, what is the minimum number of distinct test values required?",
+    "options": [
+      "3",
+      "4",
+      "8",
+      "6"
+    ],
+    "correct": [3],
+    "explanation": "In 3-value BVA, for each boundary the boundary value itself and both of its neighbors are tested. For the lower boundary 1 this gives 0, 1 and 2; for the upper boundary 999 this gives 998, 999 and 1000. Together that is 6 distinct values: 0, 1, 2, 998, 999, 1000. The answer 4 corresponds to 2-value BVA (0, 1, 999, 1000), 3 covers only one boundary, and 8 over-counts the required neighbors."
+  },
+  {
+    "id": "ctfl-4-012",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which condition must hold for boundary value analysis to be applicable to an equivalence partition?",
+    "options": [
+      "The elements of the partition must be ordered, so that the partition has identifiable minimum and maximum values",
+      "The partition must contain only valid values",
+      "The partition must contain at least one hundred elements",
+      "The partition must have been derived from a decision table"
+    ],
+    "correct": [0],
+    "explanation": "BVA can only be applied to ordered partitions, because boundaries are defined as the minimum and maximum elements of a partition; without an ordering there are no boundaries to test. BVA applies to both valid and invalid ordered partitions, there is no minimum size requirement, and BVA extends equivalence partitioning rather than requiring a decision table."
+  },
+  {
+    "id": "ctfl-4-013",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A discount code field accepts integers from 25 to 75 inclusive. Which TWO of the following values are included in the 2-value boundary value analysis set for the valid partition? Select TWO options.",
+    "options": [
+      "26",
+      "24",
+      "74",
+      "50",
+      "76"
+    ],
+    "correct": [1, 4],
+    "explanation": "The 2-value BVA set consists of each boundary and its closest neighbor in the adjacent partition: for boundaries 25 and 75 the set is 24, 25, 75, 76. Of the listed options, only 24 and 76 belong to this set. The values 26 and 74 are the inner neighbors, which are only added in 3-value BVA, and 50 is a mid-partition value that no BVA variant requires."
+  },
+  {
+    "id": "ctfl-4-014",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "In decision table testing, what does a single column of the decision table represent?",
+    "options": [
+      "One condition that can be either true or false",
+      "One action that the system can perform",
+      "One rule, i.e., a unique combination of condition values together with the resulting actions",
+      "One test environment in which the tests will be executed"
+    ],
+    "correct": [2],
+    "explanation": "In the typical notation, rows represent the conditions (upper rows) and actions (lower rows), while each column represents one decision rule: a unique combination of condition values and the actions that should result from that combination. Conditions and actions are rows, not columns, and test environments are not part of a decision table."
+  },
+  {
+    "id": "ctfl-4-015",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A tester creates a full decision table for a loan check with 3 boolean conditions, so the full table has one column for every combination of condition values. The tester then notices that two of the columns produce identical actions and differ only in the value of one condition, which is irrelevant for those columns, so they can be merged into one column. How many columns does the minimized table have?",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "4"
+    ],
+    "correct": [0],
+    "explanation": "A full decision table for 3 boolean conditions has 2 to the power of 3 = 8 columns. Merging the two columns that differ only in an irrelevant condition value replaces 2 columns with 1, leaving 8 - 1 = 7 columns. The answer 8 is the unminimized full table, 6 would require removing two columns, and 4 would be the full table for only 2 conditions."
+  },
+  {
+    "id": "ctfl-4-016",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "An online shop uses the following decision table with two conditions, C1 'customer is a club member' and C2 'order total is above 100'. Rule 1: C1 yes, C2 yes, actions: free shipping and 10 percent discount. Rule 2: C1 yes, C2 no, action: 10 percent discount only. Rule 3: C1 no, C2 yes, action: free shipping only. Rule 4: C1 no, C2 no, action: none. A club member places an order with a total of 80. Which rule applies and what is the outcome?",
+    "options": [
+      "Rule 1: free shipping and 10 percent discount",
+      "Rule 3: free shipping only",
+      "Rule 4: no benefit",
+      "Rule 2: 10 percent discount only"
+    ],
+    "correct": [3],
+    "explanation": "The customer is a club member, so C1 is yes. The order total is 80, which is not above 100, so C2 is no. The combination C1 yes and C2 no matches Rule 2, whose only action is the 10 percent discount. Rule 1 would require the total to be above 100, Rule 3 would require a non-member with a total above 100, and Rule 4 would require a non-member with a total not above 100."
+  },
+  {
+    "id": "ctfl-4-017",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "How is coverage measured in decision table testing?",
+    "options": [
+      "As the percentage of conditions that have been set to true at least once",
+      "As the number of columns exercised by at least one test case, divided by the total number of feasible columns, expressed as a percentage",
+      "As the percentage of actions that appear in at least two columns",
+      "As the number of test cases divided by the number of conditions in the table"
+    ],
+    "correct": [1],
+    "explanation": "The common coverage criterion for decision table testing is to exercise every feasible column (rule) of the table with at least one test case; coverage is the number of exercised columns divided by the total number of feasible columns, expressed as a percentage. Coverage is not measured per condition value, per repeated action, or as a ratio of test cases to conditions."
+  },
+  {
+    "id": "ctfl-4-018",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "In state transition testing, what is meant by an invalid transition?",
+    "options": [
+      "A transition that leads back to the same state it started from",
+      "A transition whose action produces an incorrect output value",
+      "A combination of a state and an event for which the state transition model defines no transition",
+      "A transition that has already been exercised by a previous test case"
+    ],
+    "correct": [2],
+    "explanation": "An invalid transition is a state-event combination that the model does not allow: when the event occurs in that state, no transition is defined. Testing invalid transitions checks that the system does not perform an unspecified change of state. A self-transition back to the same state is a valid transition if the model defines it, an incorrect output is a failure rather than an invalid transition, and having been exercised before does not make a transition invalid."
+  },
+  {
+    "id": "ctfl-4-019",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "A media player has three states: Idle, Playing and Paused. The valid transitions are: Idle to Playing on 'play', Playing to Paused on 'pause', Paused to Playing on 'play', Playing to Idle on 'stop', and Paused to Idle on 'stop'. How many valid transitions must be exercised at least once to achieve 100 percent valid transitions coverage?",
+    "options": [
+      "5",
+      "3",
+      "6",
+      "9"
+    ],
+    "correct": [0],
+    "explanation": "Valid transitions coverage requires every valid transition in the model to be exercised at least once. The model defines exactly 5 valid transitions: Idle-play-Playing, Playing-pause-Paused, Paused-play-Playing, Playing-stop-Idle and Paused-stop-Idle, so all 5 must be exercised. The answer 3 is the number of states (all-states coverage), 9 is the number of state-event combinations for 3 states and 3 events, and 6 matches neither count."
+  },
+  {
+    "id": "ctfl-4-020",
+    "chapter": "4",
+    "kLevel": "K3",
+    "stem": "An order handling system has four states: New, Paid, Shipped and Cancelled. The valid transitions are: New to Paid on 'pay', New to Cancelled on 'cancel', Paid to Shipped on 'ship', and Paid to Cancelled on 'cancel'. Which of the following event and state combinations is an invalid transition in this model?",
+    "options": [
+      "Event 'pay' occurring in state New",
+      "Event 'ship' occurring in state Paid",
+      "Event 'cancel' occurring in state Paid",
+      "Event 'ship' occurring in state New"
+    ],
+    "correct": [3],
+    "explanation": "The model defines no transition for the event 'ship' in state New, so this state-event combination is an invalid transition; an order must be paid before it can be shipped. The other three combinations are all valid transitions defined in the model: 'pay' in New leads to Paid, 'ship' in Paid leads to Shipped, and 'cancel' in Paid leads to Cancelled."
+  },
+  {
+    "id": "ctfl-4-021",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which TWO of the following statements about coverage in state transition testing are correct? Select TWO options.",
+    "options": [
+      "All-states coverage is achieved when every state of the model has been visited by at least one test case",
+      "All-states coverage requires every valid transition to be exercised at least once",
+      "Achieving 100 percent valid transitions coverage also guarantees 100 percent all-states coverage",
+      "Valid transitions coverage requires all invalid transitions to be exercised as well",
+      "All-states coverage is generally a stronger criterion than valid transitions coverage"
+    ],
+    "correct": [0, 2],
+    "explanation": "All-states coverage only requires every state to be visited at least once, which is a weaker criterion than valid transitions coverage. Because every state in the model is reached via its transitions, exercising all valid transitions necessarily visits all states, so 100 percent valid transitions coverage guarantees 100 percent all-states coverage. All-states coverage does not require exercising every transition, valid transitions coverage concerns only valid transitions (invalid ones are a separate, additional concern), and all-states coverage is weaker, not stronger, than valid transitions coverage."
+  },
+  {
+    "id": "ctfl-4-022",
+    "chapter": "4",
+    "kLevel": "K2",
+    "stem": "Which category of test techniques derives test cases primarily from the tester's knowledge of the software, its likely defects, and similar applications?",
+    "options": [
+      "Black-box test techniques",
+      "Experience-based test techniques",
+      "White-box test techniques",
+      "Configuration-based test techniques"
+    ],
+    "correct": [1],
+    "explanation": "Experience-based techniques, such as error guessing, exploratory testing and checklist-based testing, use the knowledge and experience of testers, developers and users about likely defects and about how the software and similar applications behave. Black-box techniques are based on specified behavior, white-box techniques are based on the internal structure of the test object, and configuration-based is not one of the technique categories defined by the syllabus."
+  }
+]
