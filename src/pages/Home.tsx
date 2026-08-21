@@ -1,14 +1,13 @@
 import { useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { chapterCounts, exams, getBank, getExam } from '../lib/data'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { chapterCounts, getBank, getExam } from '../lib/data'
 import { evenDistribution, generateTest } from '../lib/generator'
-import { clearActive, loadActive, newAttemptId, saveActive } from '../lib/storage'
+import { newAttemptId, saveActive } from '../lib/storage'
 import type { Attempt, TestConfig } from '../types'
 
 export default function Home() {
   const navigate = useNavigate()
-  const [active, setActive] = useState(() => loadActive())
-  const [examId, setExamId] = useState(exams[0]?.id ?? '')
+  const { examId = '' } = useParams()
   const exam = getExam(examId)
   const counts = useMemo(() => chapterCounts(examId), [examId])
   const bankSize = useMemo(() => getBank(examId).length, [examId])
@@ -18,7 +17,13 @@ export default function Home() {
   const [timed, setTimed] = useState(false)
   const [customMinutes, setCustomMinutes] = useState(30)
 
-  if (!exam) return <p>No exams found in the knowledge base.</p>
+  if (!exam) {
+    return (
+      <p>
+        Certification not found. <Link to="/">Back to catalog</Link>
+      </p>
+    )
+  }
 
   const selectedPool = exam.chapters
     .filter((c) => selected.has(c.id))
@@ -56,52 +61,15 @@ export default function Home() {
 
   return (
     <div className="stack">
-      {active && (
-        <div className="card resume-card">
-          <div>
-            <strong>Test in progress</strong>
-            <p className="muted">
-              {active.answers.filter(Boolean).length} of {active.questions.length} questions answered
-            </p>
-          </div>
-          <div className="row">
-            <button className="btn primary" onClick={() => navigate('/test')}>
-              Resume
-            </button>
-            <button
-              className="btn ghost"
-              onClick={() => {
-                if (confirm('Discard the in-progress test?')) {
-                  clearActive()
-                  setActive(null)
-                }
-              }}
-            >
-              Discard
-            </button>
-          </div>
-        </div>
-      )}
-
       <section>
-        {exams.length > 1 ? (
-          <label className="field">
-            <span>Certification</span>
-            <select value={examId} onChange={(e) => setExamId(e.target.value)}>
-              {exams.map((e) => (
-                <option key={e.id} value={e.id}>
-                  {e.name} ({e.syllabusVersion})
-                </option>
-              ))}
-            </select>
-          </label>
-        ) : (
-          <h1 className="page-title">
-            {exam.name} <span className="muted">({exam.syllabusVersion})</span>
-          </h1>
-        )}
         <p className="muted">
-          {exam.description} Question bank: {bankSize} questions.
+          <Link to="/">← All certifications</Link>
+        </p>
+        <h1 className="page-title">
+          {exam.certification} — {exam.level}
+        </h1>
+        <p className="muted">
+          {exam.description} Question bank: {bankSize} questions. Syllabus {exam.syllabusVersion}.
         </p>
       </section>
 

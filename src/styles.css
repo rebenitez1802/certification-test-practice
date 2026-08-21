@@ -260,6 +260,49 @@ a {
   margin: 2px 0 0;
 }
 
+/* ---- catalog ---- */
+
+.level-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.level-row {
+  font: inherit;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.level-row:hover {
+  border-color: var(--accent);
+}
+
+.level-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.level-name {
+  font-weight: 600;
+}
+
+.level-arrow {
+  color: var(--accent);
+  font-size: 18px;
+}
+
 /* ---- runner ---- */
 
 .runner {

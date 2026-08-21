@@ -1,5 +1,7 @@
 {
   "id": "istqb-ctfl",
+  "certification": "ISTQB Certified Tester",
+  "level": "Foundation Level (CTFL)",
   "name": "ISTQB Certified Tester Foundation Level",
   "shortName": "ISTQB CTFL",
   "syllabusVersion": "v4.0",

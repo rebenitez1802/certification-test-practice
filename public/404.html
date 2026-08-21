@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Certification Test Practice</title>
+    <!--
+      GitHub Pages SPA fallback (github.com/rafgraph/spa-github-pages).
+      GitHub Pages has no server-side routing, so a deep link or refresh of a
+      client route (e.g. /certification-test-practice/exam/istqb-ctfl) 404s.
+      This page catches that, encodes the path into a query string, and
+      redirects to index.html, which decodes it back before the app boots.
+      pathSegmentsToKeep = 1 keeps the repo-name segment for project pages.
+    -->
+    <script>
+      var pathSegmentsToKeep = 1
+      var l = window.location
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(pathSegmentsToKeep)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash,
+      )
+    </script>
+  </head>
+  <body></body>
+</html>
