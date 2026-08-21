@@ -13,6 +13,10 @@ export interface MockSpec {
 
 export interface Exam {
   id: string
+  /** certification family this exam belongs to, e.g. "ISTQB Certified Tester" */
+  certification: string
+  /** level within the certification, e.g. "Foundation Level (CTFL)" */
+  level: string
   name: string
   shortName: string
   syllabusVersion: string

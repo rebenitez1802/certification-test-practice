@@ -24,6 +24,11 @@ for (const dir of examDirs) {
     fail(examPath, `cannot read/parse: ${e.message}`)
     continue
   }
+  for (const field of ['certification', 'level', 'name', 'shortName']) {
+    if (typeof exam[field] !== 'string' || !exam[field].trim()) {
+      fail(examPath, `missing or empty "${field}"`)
+    }
+  }
   const chapterIds = new Set((exam.chapters ?? []).map((c) => c.id))
   const seenIds = new Set()
   const perChapter = {}
